@@ -1,0 +1,16 @@
+{
+    "model_name": "att_mh_rnn",
+    "cnn_filters": "10,1",
+    "cnn_kernel_size": "(5,1),(5,1)",
+    "cnn_act": "'relu','relu'",
+    "cnn_dilation_rate": "(1,1),(1,1)",
+    "cnn_strides": "(1,1),(1,1)",
+    "rnn_layers": 2,
+    "rnn_type": "gru",
+    "rnn_units": 128,
+    "heads": 4,
+    "dropout1": 0.2,
+    "units2": "64",
+    "act2": "'relu'",
+    "start_checkpoint": "models_data_v2_12_labels/att_mh_rnn_1/best_weights"
+}

@@ -1,0 +1,7 @@
+tensorflow==2.4.0rc1
+tensorflow_addons
+pydot
+graphviz
+numpy==1.19.5
+absl-py
+transformers
