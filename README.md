@@ -2,14 +2,16 @@
 
 <img src="kwt.png" alt="drawing" width="200"/>
 
-This is the official repository for the paper [Keyword Transformer: A Self-Attention Model for Keyword Spotting](https://arxiv.org/abs/2104.00769). Consider citing our paper if you find this work useful.
+This is the official repository for the paper [Keyword Transformer: A Self-Attention Model for Keyword Spotting](https://arxiv.org/abs/2104.00769), presented at Interspeech 2021. Consider citing our paper if you find this work useful.
 
 ```
-@article{berg2021keyword,
-  title={Keyword Transformer: A Self-Attention Model for Keyword Spotting},
-  author={Berg, Axel and O'Connor, Mark and Cruz, Miguel Tairum},
-  journal={arXiv preprint arXiv:2104.00769},
-  year={2021}
+@inproceedings{berg21_interspeech,
+  author={Axel Berg and Mark O’Connor and Miguel Tairum Cruz},
+  title={{Keyword Transformer: A Self-Attention Model for Keyword Spotting}},
+  year=2021,
+  booktitle={Proc. Interspeech 2021},
+  pages={4249--4253},
+  doi={10.21437/Interspeech.2021-1286}
 }
 ```
 
