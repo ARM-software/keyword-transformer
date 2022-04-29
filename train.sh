@@ -22,7 +22,7 @@ $CMD_TRAIN \
 --warmup_epochs 10 \
 --l2_weight_decay 0.1 \
 --learning_rate '0.001' \
---batch_size 512 \
+--batch_size 128 \
 --label_smoothing 0.1 \
 --window_size_ms 30.0 \
 --window_stride_ms 10.0 \
