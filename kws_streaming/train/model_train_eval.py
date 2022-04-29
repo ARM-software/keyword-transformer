@@ -101,6 +101,7 @@ bazel run tensorflow/examples/speech_commands:train --
 --data_dir /data --wanted_words up,down --split_data 0
 
 """
+import wandb
 import json
 import os
 import sys
@@ -362,6 +363,15 @@ if __name__ == '__main__':
   # kws_transformer settings
   parser_kws_transformer = subparsers.add_parser('kws_transformer')
   kws_transformer.model_parameters(parser_kws_transformer)
+
+  # WANDB LOGGING INIT
+  wandb.init(project="kwt-improvements", 
+           name = "First try", # needs to be changed between runs
+           entity="adeeplearners",
+           config = {
+               "Notes": 'Default Hyper Parameters, Swish activation.',
+           }
+           )
 
   FLAGS, unparsed = parser.parse_known_args()
   if unparsed and tuple(unparsed) != ('--alsologtostderr',):

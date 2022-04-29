@@ -1,0 +1,36 @@
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/usr/lib/python3.6/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/home/ubuntu/idl_project/keyword-transformer/kws_streaming/train/model_train_eval.py", line 379, in <module>
+    tf.app.run(main=main, argv=[sys.argv[0]] + unparsed)
+  File "/home/ubuntu/idl_project/keyword-transformer/venv3/lib/python3.6/site-packages/tensorflow/python/platform/app.py", line 40, in run
+    _run(main=main, argv=argv, flags_parser=_parse_flags_tolerate_undef)
+  File "/home/ubuntu/idl_project/keyword-transformer/venv3/lib/python3.6/site-packages/absl/app.py", line 312, in run
+    _run_main(main, args)
+  File "/home/ubuntu/idl_project/keyword-transformer/venv3/lib/python3.6/site-packages/absl/app.py", line 258, in _run_main
+    sys.exit(main(argv))
+  File "/home/ubuntu/idl_project/keyword-transformer/kws_streaming/train/model_train_eval.py", line 145, in main
+    os.makedirs(flags.train_dir)
+  File "/usr/lib/python3.6/os.py", line 220, in makedirs
+    mkdir(name, mode)
+FileExistsError: [Errno 17] File exists: '/home/ubuntu/idl_project/keyword-transformer/models_data_v2_12_labels/my_model/'
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/usr/lib/python3.6/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/home/ubuntu/idl_project/keyword-transformer/kws_streaming/train/model_train_eval.py", line 379, in <module>
+    tf.app.run(main=main, argv=[sys.argv[0]] + unparsed)
+  File "/home/ubuntu/idl_project/keyword-transformer/venv3/lib/python3.6/site-packages/tensorflow/python/platform/app.py", line 40, in run
+    _run(main=main, argv=argv, flags_parser=_parse_flags_tolerate_undef)
+  File "/home/ubuntu/idl_project/keyword-transformer/venv3/lib/python3.6/site-packages/absl/app.py", line 312, in run
+    _run_main(main, args)
+  File "/home/ubuntu/idl_project/keyword-transformer/venv3/lib/python3.6/site-packages/absl/app.py", line 258, in _run_main
+    sys.exit(main(argv))
+  File "/home/ubuntu/idl_project/keyword-transformer/kws_streaming/train/model_train_eval.py", line 145, in main
+    os.makedirs(flags.train_dir)
+  File "/usr/lib/python3.6/os.py", line 220, in makedirs
+    mkdir(name, mode)
+FileExistsError: [Errno 17] File exists: '/home/ubuntu/idl_project/keyword-transformer/models_data_v2_12_labels/my_model/'

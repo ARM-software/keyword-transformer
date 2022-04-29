@@ -86,9 +86,8 @@ class TransformerBlock(tf.keras.layers.Layer):
 
         self.ffn = tf.keras.Sequential(
             [
-                Dense(ff_dim, kernel_initializer=TruncatedNormal(mean=0., stddev=TRUNC_STD), bias_initializer=Zeros(), activation='swish'),
-                #tfa.layers.GELU(approximate=approximate_gelu),
-                # tf.keras.activations.swish(),
+                Dense(ff_dim, kernel_initializer=TruncatedNormal(mean=0., stddev=TRUNC_STD), bias_initializer=Zeros()),
+                tfa.layers.GELU(approximate=approximate_gelu),
                 Dense(embed_dim, kernel_initializer=TruncatedNormal(mean=0., stddev=TRUNC_STD), bias_initializer=Zeros()),
             ]
         )

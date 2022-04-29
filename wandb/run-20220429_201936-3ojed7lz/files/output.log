@@ -1,0 +1,979 @@
+2022-04-29 20:19:39.100607: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX512F
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2022-04-29 20:19:39.100872: I tensorflow/compiler/jit/xla_gpu_device.cc:99] Not creating XLA devices, tf_xla_enable_xla_devices not set
+2022-04-29 20:19:39.101929: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcuda.so.1
+2022-04-29 20:19:39.284277: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:941] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2022-04-29 20:19:39.288988: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1720] Found device 0 with properties:
+pciBusID: 0000:00:1e.0 name: Tesla T4 computeCapability: 7.5
+coreClock: 1.59GHz coreCount: 40 deviceMemorySize: 14.56GiB deviceMemoryBandwidth: 298.08GiB/s
+2022-04-29 20:19:39.289038: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudart.so.11.0
+2022-04-29 20:19:39.291979: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcublas.so.11
+2022-04-29 20:19:39.292070: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcublasLt.so.11
+2022-04-29 20:19:39.293291: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcufft.so.10
+2022-04-29 20:19:39.293663: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcurand.so.10
+2022-04-29 20:19:39.296703: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcusolver.so.10
+2022-04-29 20:19:39.297409: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcusparse.so.11
+2022-04-29 20:19:39.297597: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudnn.so.8
+2022-04-29 20:19:39.297713: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:941] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2022-04-29 20:19:39.299577: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:941] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2022-04-29 20:19:39.301259: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1862] Adding visible gpu devices: 0
+2022-04-29 20:19:39.301325: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudart.so.11.0
+2022-04-29 20:19:39.986095: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1261] Device interconnect StreamExecutor with strength 1 edge matrix:
+2022-04-29 20:19:39.986142: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1267]      0
+2022-04-29 20:19:39.986159: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1280] 0:   N
+2022-04-29 20:19:39.986429: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:941] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2022-04-29 20:19:39.988077: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:941] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2022-04-29 20:19:39.989456: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:941] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2022-04-29 20:19:39.990760: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1406] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 13782 MB memory) -> physical GPU (device: 0, name: Tesla T4, pci bus id: 0000:00:1e.0, compute capability: 7.5)
+WARNING:tensorflow:From /home/ubuntu/idl_project/keyword-transformer/kws_streaming/train/train.py:58: The name tf.keras.backend.set_session is deprecated. Please use tf.compat.v1.keras.backend.set_session instead.
+W0429 20:19:39.991661 139761460909888 module_wrapper.py:138] From /home/ubuntu/idl_project/keyword-transformer/kws_streaming/train/train.py:58: The name tf.keras.backend.set_session is deprecated. Please use tf.compat.v1.keras.backend.set_session instead.
+2022-04-29 20:19:41.010768: I tensorflow/compiler/jit/xla_cpu_device.cc:41] Not creating XLA devices, tf_xla_enable_xla_devices not set
+2022-04-29 20:19:41.010974: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:941] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2022-04-29 20:19:41.012423: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1720] Found device 0 with properties:
+pciBusID: 0000:00:1e.0 name: Tesla T4 computeCapability: 7.5
+coreClock: 1.59GHz coreCount: 40 deviceMemorySize: 14.56GiB deviceMemoryBandwidth: 298.08GiB/s
+2022-04-29 20:19:41.012471: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudart.so.11.0
+2022-04-29 20:19:41.012503: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcublas.so.11
+2022-04-29 20:19:41.012518: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcublasLt.so.11
+2022-04-29 20:19:41.012532: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcufft.so.10
+2022-04-29 20:19:41.012546: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcurand.so.10
+2022-04-29 20:19:41.012582: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcusolver.so.10
+2022-04-29 20:19:41.012600: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcusparse.so.11
+2022-04-29 20:19:41.012615: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudnn.so.8
+2022-04-29 20:19:41.012688: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:941] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2022-04-29 20:19:41.014000: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:941] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2022-04-29 20:19:41.015251: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1862] Adding visible gpu devices: 0
+2022-04-29 20:19:41.015588: I tensorflow/compiler/jit/xla_gpu_device.cc:99] Not creating XLA devices, tf_xla_enable_xla_devices not set
+2022-04-29 20:19:41.015707: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:941] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2022-04-29 20:19:41.017029: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1720] Found device 0 with properties:
+pciBusID: 0000:00:1e.0 name: Tesla T4 computeCapability: 7.5
+coreClock: 1.59GHz coreCount: 40 deviceMemorySize: 14.56GiB deviceMemoryBandwidth: 298.08GiB/s
+2022-04-29 20:19:41.017072: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudart.so.11.0
+2022-04-29 20:19:41.017100: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcublas.so.11
+2022-04-29 20:19:41.017117: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcublasLt.so.11
+2022-04-29 20:19:41.017141: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcufft.so.10
+2022-04-29 20:19:41.017159: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcurand.so.10
+2022-04-29 20:19:41.017179: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcusolver.so.10
+2022-04-29 20:19:41.017196: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcusparse.so.11
+2022-04-29 20:19:41.017215: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudnn.so.8
+2022-04-29 20:19:41.017290: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:941] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2022-04-29 20:19:41.018677: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:941] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2022-04-29 20:19:41.019958: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1862] Adding visible gpu devices: 0
+2022-04-29 20:19:41.020007: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1261] Device interconnect StreamExecutor with strength 1 edge matrix:
+2022-04-29 20:19:41.020023: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1267]      0
+2022-04-29 20:19:41.020036: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1280] 0:   N
+2022-04-29 20:19:41.020152: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:941] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2022-04-29 20:19:41.021501: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:941] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2022-04-29 20:19:41.022832: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1406] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 13782 MB memory) -> physical GPU (device: 0, name: Tesla T4, pci bus id: 0000:00:1e.0, compute capability: 7.5)
+2022-04-29 20:19:41.028771: I tensorflow/compiler/mlir/mlir_graph_optimization_pass.cc:196] None of the MLIR optimization passes are enabled (registered 0 passes)
+2022-04-29 20:19:41.048676: I tensorflow/core/platform/profile_utils/cpu_utils.cc:112] CPU Frequency: 2499995000 Hz
+I0429 20:19:41.247846 139761460909888 train.py:78] Namespace(approximate_gelu=False, attention_type='time', background_frequency=0.8, background_volume=0.1, batch_size=128, causal_data_frame_padding=0, clip_duration_ms=1000, d_model=192, data_dir='/home/ubuntu/idl_project/keyword-transformer/data2/', data_frame_padding=None, data_stride=1, data_url='', dct_num_features=40, desired_samples=16000, distill_teacher_json=None, dropout1=0.0, eval_step_interval=72, feature_type='mfcc_tf', fft_magnitude_squared=False, frequency_mask_max_size=7, frequency_masks_number=2, heads=3, how_many_training_steps='23438', l2_weight_decay=0.1, label_count=12, label_smoothing=0.1, learning_rate='0.001', log_epsilon=1e-12, lr_schedule='cosine', mel_lower_edge_hertz=20.0, mel_non_zero_only=1, mel_num_bins=80, mel_upper_edge_hertz=7600.0, mlp_dim=768, model_name='kws_transformer', novograd_beta_1=0.95, novograd_beta_2=0.5, novograd_grad_averaging=0, novograd_weight_decay=0.001, num_layers=12, optimizer='adamw', optimizer_epsilon=1e-08, patch_size='1,40', pick_deterministically=1, preemph=0.0, prenorm=False, preprocess='raw', resample=0.15, return_softmax=0, sample_rate=16000, save_step_interval=100, silence_percentage=10.0, sp_resample=0.0, sp_time_shift_ms=0.0, spec_cutout_frequency_mask_size=5, spec_cutout_masks_number=3, spec_cutout_time_mask_size=10, spectrogram_length=98, split_data=1, start_checkpoint='', summaries_dir='/home/ubuntu/idl_project/keyword-transformer/models_data_v2_12_labels/my_model/logs/', testing_percentage=10, time_mask_max_size=25, time_masks_number=2, time_shift_ms=100.0, train=1, train_dir='/home/ubuntu/idl_project/keyword-transformer/models_data_v2_12_labels/my_model/', training=True, unknown_percentage=10.0, use_spec_augment=1, use_spec_cutout=0, use_tf_fft=0, validation_percentage=10, verbosity=0, volume_resample=0.0, wanted_words='yes,no,up,down,left,right,on,off,stop,go', warmup_epochs=10.0, window_size_ms=30.0, window_size_samples=480, window_stride_ms=10.0, window_stride_samples=160, window_type='hann')
+Model: "model"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #
+=================================================================
+input_1 (InputLayer)         [(128, 16000)]            0
+_________________________________________________________________
+speech_features (SpeechFeatu (128, 98, 40)             0
+_________________________________________________________________
+kws_transformer (KWSTransfor (128, 192)                5358528
+_________________________________________________________________
+sequential_12 (Sequential)   multiple                  2316
+=================================================================
+Total params: 5,360,844
+Trainable params: 5,360,844
+Non-trainable params: 0
+_________________________________________________________________
+I0429 20:19:44.148688 139761460909888 train.py:97] None
+I0429 20:19:44.840370 139761460909888 train.py:147] Training from step: 0
+/home/ubuntu/idl_project/keyword-transformer/venv3/lib/python3.6/site-packages/tensorflow/python/keras/engine/training.py:2325: UserWarning: `Model.state_updates` will be removed in a future version. This property should not be used in TensorFlow 2.0, as `updates` are applied automatically.
+  warnings.warn('`Model.state_updates` will be removed in a future version. '
+2022-04-29 20:19:46.609251: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcublas.so.11
+2022-04-29 20:19:47.138475: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcublasLt.so.11
+I0429 20:19:57.186732 139761460909888 train.py:276] Step 0: Validation accuracy = 8.20% (N=4352)
+I0429 20:19:57.634313 139761460909888 train.py:286] So far the best validation accuracy is 8.20%
+I0429 20:20:04.287605 139761460909888 train.py:224] Step #1: rate 0.000000, accuracy 3.91%, cross entropy 2.522507
+I0429 20:20:04.751359 139761460909888 train.py:224] Step #2: rate 0.000000, accuracy 6.25%, cross entropy 2.524929
+I0429 20:20:05.217201 139761460909888 train.py:224] Step #3: rate 0.000000, accuracy 3.12%, cross entropy 2.535416
+I0429 20:20:05.693792 139761460909888 train.py:224] Step #4: rate 0.000000, accuracy 8.59%, cross entropy 2.488396
+I0429 20:20:06.160211 139761460909888 train.py:224] Step #5: rate 0.000000, accuracy 9.38%, cross entropy 2.488026
+I0429 20:20:06.633230 139761460909888 train.py:224] Step #6: rate 0.000001, accuracy 10.16%, cross entropy 2.518673
+I0429 20:20:07.103207 139761460909888 train.py:224] Step #7: rate 0.000001, accuracy 10.16%, cross entropy 2.486939
+I0429 20:20:07.576294 139761460909888 train.py:224] Step #8: rate 0.000001, accuracy 10.16%, cross entropy 2.511124
+I0429 20:20:08.046004 139761460909888 train.py:224] Step #9: rate 0.000001, accuracy 10.16%, cross entropy 2.488024
+I0429 20:20:08.515528 139761460909888 train.py:224] Step #10: rate 0.000001, accuracy 9.38%, cross entropy 2.504348
+I0429 20:20:08.986603 139761460909888 train.py:224] Step #11: rate 0.000001, accuracy 6.25%, cross entropy 2.493489
+I0429 20:20:09.473706 139761460909888 train.py:224] Step #12: rate 0.000001, accuracy 12.50%, cross entropy 2.465912
+I0429 20:20:09.938639 139761460909888 train.py:224] Step #13: rate 0.000001, accuracy 7.03%, cross entropy 2.488531
+I0429 20:20:10.410296 139761460909888 train.py:224] Step #14: rate 0.000001, accuracy 7.81%, cross entropy 2.510796
+I0429 20:20:10.874683 139761460909888 train.py:224] Step #15: rate 0.000001, accuracy 7.81%, cross entropy 2.501666
+I0429 20:20:11.345654 139761460909888 train.py:224] Step #16: rate 0.000001, accuracy 7.03%, cross entropy 2.510180
+I0429 20:20:11.808723 139761460909888 train.py:224] Step #17: rate 0.000001, accuracy 7.81%, cross entropy 2.519849
+I0429 20:20:12.287303 139761460909888 train.py:224] Step #18: rate 0.000002, accuracy 10.16%, cross entropy 2.476839
+I0429 20:20:12.753869 139761460909888 train.py:224] Step #19: rate 0.000002, accuracy 6.25%, cross entropy 2.507884
+I0429 20:20:13.224419 139761460909888 train.py:224] Step #20: rate 0.000002, accuracy 7.03%, cross entropy 2.491087
+I0429 20:20:13.681560 139761460909888 train.py:224] Step #21: rate 0.000002, accuracy 7.81%, cross entropy 2.495175
+I0429 20:20:14.156408 139761460909888 train.py:224] Step #22: rate 0.000002, accuracy 11.72%, cross entropy 2.470642
+I0429 20:20:14.630880 139761460909888 train.py:224] Step #23: rate 0.000002, accuracy 9.38%, cross entropy 2.483493
+I0429 20:20:15.088592 139761460909888 train.py:224] Step #24: rate 0.000002, accuracy 7.81%, cross entropy 2.500925
+I0429 20:20:15.562542 139761460909888 train.py:224] Step #25: rate 0.000002, accuracy 5.47%, cross entropy 2.505925
+I0429 20:20:16.033748 139761460909888 train.py:224] Step #26: rate 0.000002, accuracy 7.03%, cross entropy 2.483817
+I0429 20:20:16.515945 139761460909888 train.py:224] Step #27: rate 0.000002, accuracy 10.16%, cross entropy 2.470344
+I0429 20:20:16.989093 139761460909888 train.py:224] Step #28: rate 0.000002, accuracy 8.59%, cross entropy 2.486205
+I0429 20:20:17.457674 139761460909888 train.py:224] Step #29: rate 0.000003, accuracy 6.25%, cross entropy 2.483609
+I0429 20:20:17.933780 139761460909888 train.py:224] Step #30: rate 0.000003, accuracy 4.69%, cross entropy 2.498389
+I0429 20:20:18.398355 139761460909888 train.py:224] Step #31: rate 0.000003, accuracy 9.38%, cross entropy 2.466750
+I0429 20:20:18.864874 139761460909888 train.py:224] Step #32: rate 0.000003, accuracy 4.69%, cross entropy 2.486894
+I0429 20:20:19.345903 139761460909888 train.py:224] Step #33: rate 0.000003, accuracy 2.34%, cross entropy 2.506390
+I0429 20:20:19.841314 139761460909888 train.py:224] Step #34: rate 0.000003, accuracy 7.81%, cross entropy 2.504323
+I0429 20:20:20.311418 139761460909888 train.py:224] Step #35: rate 0.000003, accuracy 7.81%, cross entropy 2.470360
+I0429 20:20:20.791554 139761460909888 train.py:224] Step #36: rate 0.000003, accuracy 8.59%, cross entropy 2.480127
+I0429 20:20:21.259649 139761460909888 train.py:224] Step #37: rate 0.000003, accuracy 9.38%, cross entropy 2.460685
+I0429 20:20:21.730188 139761460909888 train.py:224] Step #38: rate 0.000003, accuracy 11.72%, cross entropy 2.468971
+I0429 20:20:22.214334 139761460909888 train.py:224] Step #39: rate 0.000003, accuracy 5.47%, cross entropy 2.481277
+I0429 20:20:22.698134 139761460909888 train.py:224] Step #40: rate 0.000003, accuracy 9.38%, cross entropy 2.454817
+I0429 20:20:23.180764 139761460909888 train.py:224] Step #41: rate 0.000004, accuracy 5.47%, cross entropy 2.471243
+I0429 20:20:23.682528 139761460909888 train.py:224] Step #42: rate 0.000004, accuracy 7.81%, cross entropy 2.477211
+I0429 20:20:24.162001 139761460909888 train.py:224] Step #43: rate 0.000004, accuracy 10.16%, cross entropy 2.463927
+I0429 20:20:24.640087 139761460909888 train.py:224] Step #44: rate 0.000004, accuracy 7.81%, cross entropy 2.469044
+I0429 20:20:25.125317 139761460909888 train.py:224] Step #45: rate 0.000004, accuracy 7.81%, cross entropy 2.456671
+I0429 20:20:25.606966 139761460909888 train.py:224] Step #46: rate 0.000004, accuracy 10.16%, cross entropy 2.456504
+I0429 20:20:26.082885 139761460909888 train.py:224] Step #47: rate 0.000004, accuracy 9.38%, cross entropy 2.451989
+I0429 20:20:26.569676 139761460909888 train.py:224] Step #48: rate 0.000004, accuracy 10.94%, cross entropy 2.471318
+I0429 20:20:27.050994 139761460909888 train.py:224] Step #49: rate 0.000004, accuracy 13.28%, cross entropy 2.463181
+I0429 20:20:27.537238 139761460909888 train.py:224] Step #50: rate 0.000004, accuracy 13.28%, cross entropy 2.476428
+I0429 20:20:28.015320 139761460909888 train.py:224] Step #51: rate 0.000004, accuracy 17.19%, cross entropy 2.462493
+I0429 20:20:28.510151 139761460909888 train.py:224] Step #52: rate 0.000005, accuracy 16.41%, cross entropy 2.460381
+I0429 20:20:28.984842 139761460909888 train.py:224] Step #53: rate 0.000005, accuracy 17.97%, cross entropy 2.446393
+I0429 20:20:29.461198 139761460909888 train.py:224] Step #54: rate 0.000005, accuracy 21.09%, cross entropy 2.443566
+I0429 20:20:29.932863 139761460909888 train.py:224] Step #55: rate 0.000005, accuracy 18.75%, cross entropy 2.444071
+I0429 20:20:30.405614 139761460909888 train.py:224] Step #56: rate 0.000005, accuracy 16.41%, cross entropy 2.442174
+I0429 20:20:30.876428 139761460909888 train.py:224] Step #57: rate 0.000005, accuracy 16.41%, cross entropy 2.449935
+I0429 20:20:31.356736 139761460909888 train.py:224] Step #58: rate 0.000005, accuracy 15.62%, cross entropy 2.462610
+I0429 20:20:31.831500 139761460909888 train.py:224] Step #59: rate 0.000005, accuracy 18.75%, cross entropy 2.447175
+I0429 20:20:32.310740 139761460909888 train.py:224] Step #60: rate 0.000005, accuracy 14.84%, cross entropy 2.449039
+I0429 20:20:32.786798 139761460909888 train.py:224] Step #61: rate 0.000005, accuracy 12.50%, cross entropy 2.452250
+I0429 20:20:33.257199 139761460909888 train.py:224] Step #62: rate 0.000005, accuracy 17.97%, cross entropy 2.443222
+I0429 20:20:33.731637 139761460909888 train.py:224] Step #63: rate 0.000005, accuracy 17.19%, cross entropy 2.437255
+I0429 20:20:34.213467 139761460909888 train.py:224] Step #64: rate 0.000006, accuracy 13.28%, cross entropy 2.454790
+I0429 20:20:34.682399 139761460909888 train.py:224] Step #65: rate 0.000006, accuracy 18.75%, cross entropy 2.418842
+I0429 20:20:35.148335 139761460909888 train.py:224] Step #66: rate 0.000006, accuracy 19.53%, cross entropy 2.408811
+I0429 20:20:35.630932 139761460909888 train.py:224] Step #67: rate 0.000006, accuracy 10.16%, cross entropy 2.446777
+I0429 20:20:36.111077 139761460909888 train.py:224] Step #68: rate 0.000006, accuracy 9.38%, cross entropy 2.453215
+I0429 20:20:36.582768 139761460909888 train.py:224] Step #69: rate 0.000006, accuracy 17.97%, cross entropy 2.434976
+I0429 20:20:37.056392 139761460909888 train.py:224] Step #70: rate 0.000006, accuracy 17.19%, cross entropy 2.422057
+I0429 20:20:37.525698 139761460909888 train.py:224] Step #71: rate 0.000006, accuracy 16.41%, cross entropy 2.420899
+I0429 20:20:38.005209 139761460909888 train.py:224] Step #72: rate 0.000006, accuracy 10.94%, cross entropy 2.441241
+I0429 20:20:48.072837 139761460909888 train.py:276] Step 72: Validation accuracy = 11.67% (N=4352)
+I0429 20:20:49.163374 139761460909888 train.py:286] So far the best validation accuracy is 11.67%
+I0429 20:20:49.638271 139761460909888 train.py:224] Step #73: rate 0.000006, accuracy 19.53%, cross entropy 2.415650
+I0429 20:20:50.109013 139761460909888 train.py:224] Step #74: rate 0.000006, accuracy 17.19%, cross entropy 2.415948
+I0429 20:20:50.587478 139761460909888 train.py:224] Step #75: rate 0.000007, accuracy 16.41%, cross entropy 2.419040
+I0429 20:20:51.057007 139761460909888 train.py:224] Step #76: rate 0.000007, accuracy 18.75%, cross entropy 2.415676
+I0429 20:20:51.537890 139761460909888 train.py:224] Step #77: rate 0.000007, accuracy 12.50%, cross entropy 2.416734
+I0429 20:20:52.015174 139761460909888 train.py:224] Step #78: rate 0.000007, accuracy 15.62%, cross entropy 2.420531
+I0429 20:20:52.490059 139761460909888 train.py:224] Step #79: rate 0.000007, accuracy 17.97%, cross entropy 2.413867
+I0429 20:20:52.972907 139761460909888 train.py:224] Step #80: rate 0.000007, accuracy 14.84%, cross entropy 2.437826
+I0429 20:20:53.445735 139761460909888 train.py:224] Step #81: rate 0.000007, accuracy 11.72%, cross entropy 2.417254
+I0429 20:20:53.931411 139761460909888 train.py:224] Step #82: rate 0.000007, accuracy 14.06%, cross entropy 2.439826
+I0429 20:20:54.413224 139761460909888 train.py:224] Step #83: rate 0.000007, accuracy 18.75%, cross entropy 2.413136
+I0429 20:20:54.885828 139761460909888 train.py:224] Step #84: rate 0.000007, accuracy 17.97%, cross entropy 2.405910
+I0429 20:20:55.358317 139761460909888 train.py:224] Step #85: rate 0.000007, accuracy 16.41%, cross entropy 2.410263
+I0429 20:20:55.820456 139761460909888 train.py:224] Step #86: rate 0.000007, accuracy 18.75%, cross entropy 2.374728
+I0429 20:20:56.286852 139761460909888 train.py:224] Step #87: rate 0.000008, accuracy 22.66%, cross entropy 2.364386
+I0429 20:20:56.762986 139761460909888 train.py:224] Step #88: rate 0.000008, accuracy 19.53%, cross entropy 2.401788
+I0429 20:20:57.237238 139761460909888 train.py:224] Step #89: rate 0.000008, accuracy 14.84%, cross entropy 2.420083
+I0429 20:20:57.696622 139761460909888 train.py:224] Step #90: rate 0.000008, accuracy 20.31%, cross entropy 2.362782
+I0429 20:20:58.168514 139761460909888 train.py:224] Step #91: rate 0.000008, accuracy 21.09%, cross entropy 2.384329
+I0429 20:20:58.642111 139761460909888 train.py:224] Step #92: rate 0.000008, accuracy 10.94%, cross entropy 2.426979
+I0429 20:20:59.120161 139761460909888 train.py:224] Step #93: rate 0.000008, accuracy 10.94%, cross entropy 2.433172
+I0429 20:20:59.590425 139761460909888 train.py:224] Step #94: rate 0.000008, accuracy 21.09%, cross entropy 2.363102
+I0429 20:21:00.056759 139761460909888 train.py:224] Step #95: rate 0.000008, accuracy 17.19%, cross entropy 2.399879
+I0429 20:21:00.538809 139761460909888 train.py:224] Step #96: rate 0.000008, accuracy 14.84%, cross entropy 2.427936
+I0429 20:21:01.008311 139761460909888 train.py:224] Step #97: rate 0.000008, accuracy 15.62%, cross entropy 2.382846
+I0429 20:21:01.475270 139761460909888 train.py:224] Step #98: rate 0.000008, accuracy 20.31%, cross entropy 2.364405
+I0429 20:21:01.950225 139761460909888 train.py:224] Step #99: rate 0.000009, accuracy 14.84%, cross entropy 2.386711
+I0429 20:21:02.418920 139761460909888 train.py:224] Step #100: rate 0.000009, accuracy 17.97%, cross entropy 2.378498
+I0429 20:21:02.885660 139761460909888 train.py:224] Step #101: rate 0.000009, accuracy 18.75%, cross entropy 2.360045
+I0429 20:21:03.358245 139761460909888 train.py:224] Step #102: rate 0.000009, accuracy 13.28%, cross entropy 2.410948
+I0429 20:21:03.828099 139761460909888 train.py:224] Step #103: rate 0.000009, accuracy 15.62%, cross entropy 2.391230
+I0429 20:21:04.299766 139761460909888 train.py:224] Step #104: rate 0.000009, accuracy 19.53%, cross entropy 2.381787
+I0429 20:21:04.769059 139761460909888 train.py:224] Step #105: rate 0.000009, accuracy 18.75%, cross entropy 2.370305
+I0429 20:21:05.232327 139761460909888 train.py:224] Step #106: rate 0.000009, accuracy 21.88%, cross entropy 2.331609
+I0429 20:21:05.711539 139761460909888 train.py:224] Step #107: rate 0.000009, accuracy 14.84%, cross entropy 2.419599
+I0429 20:21:06.188391 139761460909888 train.py:224] Step #108: rate 0.000009, accuracy 14.84%, cross entropy 2.400822
+I0429 20:21:06.659764 139761460909888 train.py:224] Step #109: rate 0.000009, accuracy 22.66%, cross entropy 2.353630
+I0429 20:21:07.128426 139761460909888 train.py:224] Step #110: rate 0.000010, accuracy 17.97%, cross entropy 2.377925
+I0429 20:21:07.609197 139761460909888 train.py:224] Step #111: rate 0.000010, accuracy 10.16%, cross entropy 2.393830
+I0429 20:21:08.070589 139761460909888 train.py:224] Step #112: rate 0.000010, accuracy 21.09%, cross entropy 2.304422
+I0429 20:21:08.540229 139761460909888 train.py:224] Step #113: rate 0.000010, accuracy 12.50%, cross entropy 2.390366
+I0429 20:21:09.012965 139761460909888 train.py:224] Step #114: rate 0.000010, accuracy 18.75%, cross entropy 2.372399
+I0429 20:21:09.492014 139761460909888 train.py:224] Step #115: rate 0.000010, accuracy 17.97%, cross entropy 2.360448
+I0429 20:21:09.960965 139761460909888 train.py:224] Step #116: rate 0.000010, accuracy 17.19%, cross entropy 2.358223
+I0429 20:21:10.431620 139761460909888 train.py:224] Step #117: rate 0.000010, accuracy 17.19%, cross entropy 2.354302
+I0429 20:21:10.895565 139761460909888 train.py:224] Step #118: rate 0.000010, accuracy 15.62%, cross entropy 2.333896
+I0429 20:21:11.358598 139761460909888 train.py:224] Step #119: rate 0.000010, accuracy 17.19%, cross entropy 2.332284
+I0429 20:21:11.831234 139761460909888 train.py:224] Step #120: rate 0.000010, accuracy 15.62%, cross entropy 2.384433
+I0429 20:21:12.300478 139761460909888 train.py:224] Step #121: rate 0.000010, accuracy 20.31%, cross entropy 2.313154
+I0429 20:21:12.772917 139761460909888 train.py:224] Step #122: rate 0.000011, accuracy 20.31%, cross entropy 2.351789
+I0429 20:21:13.245175 139761460909888 train.py:224] Step #123: rate 0.000011, accuracy 21.88%, cross entropy 2.351235
+I0429 20:21:13.714649 139761460909888 train.py:224] Step #124: rate 0.000011, accuracy 19.53%, cross entropy 2.334106
+I0429 20:21:14.182891 139761460909888 train.py:224] Step #125: rate 0.000011, accuracy 21.09%, cross entropy 2.309233
+I0429 20:21:14.661956 139761460909888 train.py:224] Step #126: rate 0.000011, accuracy 16.41%, cross entropy 2.368310
+I0429 20:21:15.133236 139761460909888 train.py:224] Step #127: rate 0.000011, accuracy 25.78%, cross entropy 2.313483
+I0429 20:21:15.606709 139761460909888 train.py:224] Step #128: rate 0.000011, accuracy 24.22%, cross entropy 2.301479
+I0429 20:21:16.078318 139761460909888 train.py:224] Step #129: rate 0.000011, accuracy 25.00%, cross entropy 2.297395
+I0429 20:21:16.541164 139761460909888 train.py:224] Step #130: rate 0.000011, accuracy 28.91%, cross entropy 2.266357
+I0429 20:21:17.010447 139761460909888 train.py:224] Step #131: rate 0.000011, accuracy 18.75%, cross entropy 2.332293
+I0429 20:21:17.479882 139761460909888 train.py:224] Step #132: rate 0.000011, accuracy 23.44%, cross entropy 2.328071
+I0429 20:21:17.964378 139761460909888 train.py:224] Step #133: rate 0.000012, accuracy 15.62%, cross entropy 2.393114
+I0429 20:21:18.426527 139761460909888 train.py:224] Step #134: rate 0.000012, accuracy 25.00%, cross entropy 2.259634
+I0429 20:21:18.891685 139761460909888 train.py:224] Step #135: rate 0.000012, accuracy 26.56%, cross entropy 2.265210
+I0429 20:21:19.374246 139761460909888 train.py:224] Step #136: rate 0.000012, accuracy 13.28%, cross entropy 2.367273
+I0429 20:21:19.839049 139761460909888 train.py:224] Step #137: rate 0.000012, accuracy 25.78%, cross entropy 2.248576
+I0429 20:21:20.306705 139761460909888 train.py:224] Step #138: rate 0.000012, accuracy 22.66%, cross entropy 2.283320
+I0429 20:21:20.777740 139761460909888 train.py:224] Step #139: rate 0.000012, accuracy 24.22%, cross entropy 2.293176
+I0429 20:21:21.251734 139761460909888 train.py:224] Step #140: rate 0.000012, accuracy 20.31%, cross entropy 2.314903
+I0429 20:21:21.721184 139761460909888 train.py:224] Step #141: rate 0.000012, accuracy 21.09%, cross entropy 2.275454
+I0429 20:21:22.191546 139761460909888 train.py:224] Step #142: rate 0.000012, accuracy 19.53%, cross entropy 2.275125
+I0429 20:21:22.660726 139761460909888 train.py:224] Step #143: rate 0.000012, accuracy 28.91%, cross entropy 2.260041
+I0429 20:21:23.130017 139761460909888 train.py:224] Step #144: rate 0.000012, accuracy 21.88%, cross entropy 2.309805
+I0429 20:21:33.078076 139761460909888 train.py:276] Step 144: Validation accuracy = 21.83% (N=4352)
+I0429 20:21:33.314520 139761460909888 train.py:286] So far the best validation accuracy is 21.83%
+I0429 20:21:33.795917 139761460909888 train.py:224] Step #145: rate 0.000013, accuracy 14.84%, cross entropy 2.383194
+I0429 20:21:34.272457 139761460909888 train.py:224] Step #146: rate 0.000013, accuracy 16.41%, cross entropy 2.303456
+I0429 20:21:34.748117 139761460909888 train.py:224] Step #147: rate 0.000013, accuracy 14.84%, cross entropy 2.325844
+I0429 20:21:35.220504 139761460909888 train.py:224] Step #148: rate 0.000013, accuracy 19.53%, cross entropy 2.322750
+I0429 20:21:35.692206 139761460909888 train.py:224] Step #149: rate 0.000013, accuracy 27.34%, cross entropy 2.262962
+I0429 20:21:36.165090 139761460909888 train.py:224] Step #150: rate 0.000013, accuracy 18.75%, cross entropy 2.318667
+I0429 20:21:36.632317 139761460909888 train.py:224] Step #151: rate 0.000013, accuracy 15.62%, cross entropy 2.296834
+I0429 20:21:37.119739 139761460909888 train.py:224] Step #152: rate 0.000013, accuracy 19.53%, cross entropy 2.372703
+I0429 20:21:37.598206 139761460909888 train.py:224] Step #153: rate 0.000013, accuracy 13.28%, cross entropy 2.355006
+I0429 20:21:38.081056 139761460909888 train.py:224] Step #154: rate 0.000013, accuracy 15.62%, cross entropy 2.357037
+I0429 20:21:38.563143 139761460909888 train.py:224] Step #155: rate 0.000013, accuracy 17.97%, cross entropy 2.313317
+I0429 20:21:39.043871 139761460909888 train.py:224] Step #156: rate 0.000014, accuracy 17.97%, cross entropy 2.340581
+I0429 20:21:39.522073 139761460909888 train.py:224] Step #157: rate 0.000014, accuracy 24.22%, cross entropy 2.293041
+I0429 20:21:39.996267 139761460909888 train.py:224] Step #158: rate 0.000014, accuracy 25.78%, cross entropy 2.287417
+I0429 20:21:40.469614 139761460909888 train.py:224] Step #159: rate 0.000014, accuracy 20.31%, cross entropy 2.297179
+I0429 20:21:40.948591 139761460909888 train.py:224] Step #160: rate 0.000014, accuracy 19.53%, cross entropy 2.333077
+I0429 20:21:41.420874 139761460909888 train.py:224] Step #161: rate 0.000014, accuracy 21.09%, cross entropy 2.306808
+I0429 20:21:41.892014 139761460909888 train.py:224] Step #162: rate 0.000014, accuracy 22.66%, cross entropy 2.260996
+I0429 20:21:42.371433 139761460909888 train.py:224] Step #163: rate 0.000014, accuracy 19.53%, cross entropy 2.294628
+I0429 20:21:42.840453 139761460909888 train.py:224] Step #164: rate 0.000014, accuracy 18.75%, cross entropy 2.273121
+I0429 20:21:43.321252 139761460909888 train.py:224] Step #165: rate 0.000014, accuracy 17.19%, cross entropy 2.353156
+I0429 20:21:43.798787 139761460909888 train.py:224] Step #166: rate 0.000014, accuracy 21.09%, cross entropy 2.262425
+I0429 20:21:44.270134 139761460909888 train.py:224] Step #167: rate 0.000014, accuracy 22.66%, cross entropy 2.247563
+I0429 20:21:44.747223 139761460909888 train.py:224] Step #168: rate 0.000015, accuracy 20.31%, cross entropy 2.299956
+I0429 20:21:45.215536 139761460909888 train.py:224] Step #169: rate 0.000015, accuracy 30.47%, cross entropy 2.234063
+I0429 20:21:45.699349 139761460909888 train.py:224] Step #170: rate 0.000015, accuracy 22.66%, cross entropy 2.305312
+I0429 20:21:46.169414 139761460909888 train.py:224] Step #171: rate 0.000015, accuracy 26.56%, cross entropy 2.227559
+I0429 20:21:46.645070 139761460909888 train.py:224] Step #172: rate 0.000015, accuracy 18.75%, cross entropy 2.295205
+I0429 20:21:47.121525 139761460909888 train.py:224] Step #173: rate 0.000015, accuracy 16.41%, cross entropy 2.306810
+I0429 20:21:47.585160 139761460909888 train.py:224] Step #174: rate 0.000015, accuracy 24.22%, cross entropy 2.201647
+I0429 20:21:48.051845 139761460909888 train.py:224] Step #175: rate 0.000015, accuracy 17.19%, cross entropy 2.253015
+I0429 20:21:48.530540 139761460909888 train.py:224] Step #176: rate 0.000015, accuracy 20.31%, cross entropy 2.330771
+I0429 20:21:49.004175 139761460909888 train.py:224] Step #177: rate 0.000015, accuracy 19.53%, cross entropy 2.264836
+I0429 20:21:49.481474 139761460909888 train.py:224] Step #178: rate 0.000015, accuracy 19.53%, cross entropy 2.239494
+I0429 20:21:49.954056 139761460909888 train.py:224] Step #179: rate 0.000016, accuracy 30.47%, cross entropy 2.228493
+I0429 20:21:50.432519 139761460909888 train.py:224] Step #180: rate 0.000016, accuracy 24.22%, cross entropy 2.230676
+I0429 20:21:50.902117 139761460909888 train.py:224] Step #181: rate 0.000016, accuracy 21.88%, cross entropy 2.243587
+I0429 20:21:51.373388 139761460909888 train.py:224] Step #182: rate 0.000016, accuracy 21.09%, cross entropy 2.275089
+I0429 20:21:51.853937 139761460909888 train.py:224] Step #183: rate 0.000016, accuracy 12.50%, cross entropy 2.344395
+I0429 20:21:52.337419 139761460909888 train.py:224] Step #184: rate 0.000016, accuracy 20.31%, cross entropy 2.311825
+I0429 20:21:52.804030 139761460909888 train.py:224] Step #185: rate 0.000016, accuracy 25.78%, cross entropy 2.210264
+I0429 20:21:53.267514 139761460909888 train.py:224] Step #186: rate 0.000016, accuracy 21.09%, cross entropy 2.209618
+I0429 20:21:53.744970 139761460909888 train.py:224] Step #187: rate 0.000016, accuracy 17.97%, cross entropy 2.286062
+I0429 20:21:54.214611 139761460909888 train.py:224] Step #188: rate 0.000016, accuracy 20.31%, cross entropy 2.290320
+I0429 20:21:54.688831 139761460909888 train.py:224] Step #189: rate 0.000016, accuracy 19.53%, cross entropy 2.271921
+I0429 20:21:55.162029 139761460909888 train.py:224] Step #190: rate 0.000016, accuracy 25.00%, cross entropy 2.269992
+I0429 20:21:55.631198 139761460909888 train.py:224] Step #191: rate 0.000017, accuracy 28.12%, cross entropy 2.201314
+I0429 20:21:56.098501 139761460909888 train.py:224] Step #192: rate 0.000017, accuracy 27.34%, cross entropy 2.230842
+I0429 20:21:56.572393 139761460909888 train.py:224] Step #193: rate 0.000017, accuracy 25.78%, cross entropy 2.219601
+I0429 20:21:57.047979 139761460909888 train.py:224] Step #194: rate 0.000017, accuracy 25.00%, cross entropy 2.238158
+I0429 20:21:57.514811 139761460909888 train.py:224] Step #195: rate 0.000017, accuracy 27.34%, cross entropy 2.182432
+I0429 20:21:57.981968 139761460909888 train.py:224] Step #196: rate 0.000017, accuracy 30.47%, cross entropy 2.216581
+I0429 20:21:58.463622 139761460909888 train.py:224] Step #197: rate 0.000017, accuracy 27.34%, cross entropy 2.218050
+I0429 20:21:58.936308 139761460909888 train.py:224] Step #198: rate 0.000017, accuracy 25.78%, cross entropy 2.227009
+I0429 20:21:59.415171 139761460909888 train.py:224] Step #199: rate 0.000017, accuracy 18.75%, cross entropy 2.254095
+I0429 20:21:59.897832 139761460909888 train.py:224] Step #200: rate 0.000017, accuracy 17.19%, cross entropy 2.324034
+I0429 20:22:00.371398 139761460909888 train.py:224] Step #201: rate 0.000017, accuracy 16.41%, cross entropy 2.253139
+I0429 20:22:00.846756 139761460909888 train.py:224] Step #202: rate 0.000018, accuracy 24.22%, cross entropy 2.274490
+I0429 20:22:01.321844 139761460909888 train.py:224] Step #203: rate 0.000018, accuracy 25.00%, cross entropy 2.282334
+I0429 20:22:01.791747 139761460909888 train.py:224] Step #204: rate 0.000018, accuracy 21.09%, cross entropy 2.200552
+I0429 20:22:02.268059 139761460909888 train.py:224] Step #205: rate 0.000018, accuracy 26.56%, cross entropy 2.241935
+I0429 20:22:02.732900 139761460909888 train.py:224] Step #206: rate 0.000018, accuracy 26.56%, cross entropy 2.189989
+I0429 20:22:03.203739 139761460909888 train.py:224] Step #207: rate 0.000018, accuracy 26.56%, cross entropy 2.232521
+I0429 20:22:03.678663 139761460909888 train.py:224] Step #208: rate 0.000018, accuracy 25.78%, cross entropy 2.230392
+I0429 20:22:04.153090 139761460909888 train.py:224] Step #209: rate 0.000018, accuracy 20.31%, cross entropy 2.315556
+I0429 20:22:04.617781 139761460909888 train.py:224] Step #210: rate 0.000018, accuracy 27.34%, cross entropy 2.136330
+I0429 20:22:05.083050 139761460909888 train.py:224] Step #211: rate 0.000018, accuracy 27.34%, cross entropy 2.191730
+I0429 20:22:05.552900 139761460909888 train.py:224] Step #212: rate 0.000018, accuracy 21.88%, cross entropy 2.206404
+I0429 20:22:06.028396 139761460909888 train.py:224] Step #213: rate 0.000018, accuracy 16.41%, cross entropy 2.305092
+I0429 20:22:06.506805 139761460909888 train.py:224] Step #214: rate 0.000019, accuracy 21.88%, cross entropy 2.254290
+I0429 20:22:06.984229 139761460909888 train.py:224] Step #215: rate 0.000019, accuracy 19.53%, cross entropy 2.279320
+I0429 20:22:07.458908 139761460909888 train.py:224] Step #216: rate 0.000019, accuracy 21.88%, cross entropy 2.273175
+I0429 20:22:17.361525 139761460909888 train.py:276] Step 216: Validation accuracy = 25.37% (N=4352)
+I0429 20:22:17.593777 139761460909888 train.py:286] So far the best validation accuracy is 25.37%
+I0429 20:22:18.067729 139761460909888 train.py:224] Step #217: rate 0.000019, accuracy 22.66%, cross entropy 2.270542
+I0429 20:22:18.545570 139761460909888 train.py:224] Step #218: rate 0.000019, accuracy 25.00%, cross entropy 2.205643
+I0429 20:22:19.018575 139761460909888 train.py:224] Step #219: rate 0.000019, accuracy 29.69%, cross entropy 2.156160
+I0429 20:22:19.495884 139761460909888 train.py:224] Step #220: rate 0.000019, accuracy 20.31%, cross entropy 2.268371
+I0429 20:22:19.957792 139761460909888 train.py:224] Step #221: rate 0.000019, accuracy 26.56%, cross entropy 2.134204
+I0429 20:22:20.447972 139761460909888 train.py:224] Step #222: rate 0.000019, accuracy 19.53%, cross entropy 2.314557
+I0429 20:22:20.924588 139761460909888 train.py:224] Step #223: rate 0.000019, accuracy 26.56%, cross entropy 2.186149
+I0429 20:22:21.398416 139761460909888 train.py:224] Step #224: rate 0.000019, accuracy 25.00%, cross entropy 2.222717
+I0429 20:22:21.874380 139761460909888 train.py:224] Step #225: rate 0.000019, accuracy 27.34%, cross entropy 2.203847
+I0429 20:22:22.341028 139761460909888 train.py:224] Step #226: rate 0.000020, accuracy 26.56%, cross entropy 2.147323
+I0429 20:22:22.828761 139761460909888 train.py:224] Step #227: rate 0.000020, accuracy 14.06%, cross entropy 2.321992
+I0429 20:22:23.300046 139761460909888 train.py:224] Step #228: rate 0.000020, accuracy 21.88%, cross entropy 2.222360
+I0429 20:22:23.782057 139761460909888 train.py:224] Step #229: rate 0.000020, accuracy 29.69%, cross entropy 2.167535
+I0429 20:22:24.251357 139761460909888 train.py:224] Step #230: rate 0.000020, accuracy 25.00%, cross entropy 2.192850
+I0429 20:22:24.733957 139761460909888 train.py:224] Step #231: rate 0.000020, accuracy 24.22%, cross entropy 2.226271
+I0429 20:22:25.207933 139761460909888 train.py:224] Step #232: rate 0.000020, accuracy 20.31%, cross entropy 2.230793
+I0429 20:22:25.674367 139761460909888 train.py:224] Step #233: rate 0.000020, accuracy 29.69%, cross entropy 2.174744
+I0429 20:22:26.149667 139761460909888 train.py:224] Step #234: rate 0.000020, accuracy 28.91%, cross entropy 2.207510
+I0429 20:22:26.634268 139761460909888 train.py:224] Step #235: rate 0.000020, accuracy 20.31%, cross entropy 2.317271
+I0429 20:22:27.100960 139761460909888 train.py:224] Step #236: rate 0.000020, accuracy 28.12%, cross entropy 2.174948
+I0429 20:22:27.575598 139761460909888 train.py:224] Step #237: rate 0.000021, accuracy 25.78%, cross entropy 2.221463
+I0429 20:22:28.052214 139761460909888 train.py:224] Step #238: rate 0.000021, accuracy 22.66%, cross entropy 2.286886
+I0429 20:22:28.524621 139761460909888 train.py:224] Step #239: rate 0.000021, accuracy 29.69%, cross entropy 2.191828
+I0429 20:22:28.984685 139761460909888 train.py:224] Step #240: rate 0.000021, accuracy 34.38%, cross entropy 2.096810
+I0429 20:22:29.453234 139761460909888 train.py:224] Step #241: rate 0.000021, accuracy 25.78%, cross entropy 2.172770
+I0429 20:22:29.922126 139761460909888 train.py:224] Step #242: rate 0.000021, accuracy 22.66%, cross entropy 2.164276
+I0429 20:22:30.402769 139761460909888 train.py:224] Step #243: rate 0.000021, accuracy 19.53%, cross entropy 2.283950
+I0429 20:22:30.867296 139761460909888 train.py:224] Step #244: rate 0.000021, accuracy 25.00%, cross entropy 2.183105
+I0429 20:22:31.342800 139761460909888 train.py:224] Step #245: rate 0.000021, accuracy 17.97%, cross entropy 2.289160
+I0429 20:22:31.815541 139761460909888 train.py:224] Step #246: rate 0.000021, accuracy 30.47%, cross entropy 2.180281
+I0429 20:22:32.287735 139761460909888 train.py:224] Step #247: rate 0.000021, accuracy 25.78%, cross entropy 2.214195
+I0429 20:22:32.765592 139761460909888 train.py:224] Step #248: rate 0.000021, accuracy 27.34%, cross entropy 2.231123
+I0429 20:22:33.231724 139761460909888 train.py:224] Step #249: rate 0.000022, accuracy 25.00%, cross entropy 2.158999
+I0429 20:22:33.704129 139761460909888 train.py:224] Step #250: rate 0.000022, accuracy 21.88%, cross entropy 2.158445
+I0429 20:22:34.169427 139761460909888 train.py:224] Step #251: rate 0.000022, accuracy 27.34%, cross entropy 2.137641
+I0429 20:22:34.640709 139761460909888 train.py:224] Step #252: rate 0.000022, accuracy 25.78%, cross entropy 2.196203
+I0429 20:22:35.111152 139761460909888 train.py:224] Step #253: rate 0.000022, accuracy 14.84%, cross entropy 2.246983
+I0429 20:22:35.583730 139761460909888 train.py:224] Step #254: rate 0.000022, accuracy 21.88%, cross entropy 2.255065
+I0429 20:22:36.049137 139761460909888 train.py:224] Step #255: rate 0.000022, accuracy 21.09%, cross entropy 2.174226
+I0429 20:22:36.520381 139761460909888 train.py:224] Step #256: rate 0.000022, accuracy 30.47%, cross entropy 2.212048
+I0429 20:22:37.001440 139761460909888 train.py:224] Step #257: rate 0.000022, accuracy 20.31%, cross entropy 2.255032
+I0429 20:22:37.469988 139761460909888 train.py:224] Step #258: rate 0.000022, accuracy 25.78%, cross entropy 2.191695
+I0429 20:22:37.940409 139761460909888 train.py:224] Step #259: rate 0.000022, accuracy 21.09%, cross entropy 2.246755
+I0429 20:22:38.411775 139761460909888 train.py:224] Step #260: rate 0.000023, accuracy 28.12%, cross entropy 2.176094
+I0429 20:22:38.888939 139761460909888 train.py:224] Step #261: rate 0.000023, accuracy 25.78%, cross entropy 2.221303
+I0429 20:22:39.358621 139761460909888 train.py:224] Step #262: rate 0.000023, accuracy 23.44%, cross entropy 2.177689
+I0429 20:22:39.835169 139761460909888 train.py:224] Step #263: rate 0.000023, accuracy 22.66%, cross entropy 2.225674
+I0429 20:22:40.304016 139761460909888 train.py:224] Step #264: rate 0.000023, accuracy 32.03%, cross entropy 2.140944
+I0429 20:22:40.777621 139761460909888 train.py:224] Step #265: rate 0.000023, accuracy 28.12%, cross entropy 2.195643
+I0429 20:22:41.248757 139761460909888 train.py:224] Step #266: rate 0.000023, accuracy 26.56%, cross entropy 2.203373
+I0429 20:22:41.721721 139761460909888 train.py:224] Step #267: rate 0.000023, accuracy 27.34%, cross entropy 2.168525
+I0429 20:22:42.192240 139761460909888 train.py:224] Step #268: rate 0.000023, accuracy 25.78%, cross entropy 2.195546
+I0429 20:22:42.668279 139761460909888 train.py:224] Step #269: rate 0.000023, accuracy 28.12%, cross entropy 2.207754
+I0429 20:22:43.135852 139761460909888 train.py:224] Step #270: rate 0.000023, accuracy 25.00%, cross entropy 2.159405
+I0429 20:22:43.612872 139761460909888 train.py:224] Step #271: rate 0.000023, accuracy 17.97%, cross entropy 2.297394
+I0429 20:22:44.084717 139761460909888 train.py:224] Step #272: rate 0.000024, accuracy 25.78%, cross entropy 2.172473
+I0429 20:22:44.554090 139761460909888 train.py:224] Step #273: rate 0.000024, accuracy 28.12%, cross entropy 2.151095
+I0429 20:22:45.025319 139761460909888 train.py:224] Step #274: rate 0.000024, accuracy 28.12%, cross entropy 2.209521
+I0429 20:22:45.493307 139761460909888 train.py:224] Step #275: rate 0.000024, accuracy 28.91%, cross entropy 2.127620
+I0429 20:22:45.958781 139761460909888 train.py:224] Step #276: rate 0.000024, accuracy 27.34%, cross entropy 2.165547
+I0429 20:22:46.432698 139761460909888 train.py:224] Step #277: rate 0.000024, accuracy 18.75%, cross entropy 2.299004
+I0429 20:22:46.899742 139761460909888 train.py:224] Step #278: rate 0.000024, accuracy 31.25%, cross entropy 2.111010
+I0429 20:22:47.375442 139761460909888 train.py:224] Step #279: rate 0.000024, accuracy 24.22%, cross entropy 2.138271
+I0429 20:22:47.857918 139761460909888 train.py:224] Step #280: rate 0.000024, accuracy 21.88%, cross entropy 2.268130
+I0429 20:22:48.332735 139761460909888 train.py:224] Step #281: rate 0.000024, accuracy 28.91%, cross entropy 2.166183
+I0429 20:22:48.816165 139761460909888 train.py:224] Step #282: rate 0.000024, accuracy 17.97%, cross entropy 2.204913
+I0429 20:22:49.280141 139761460909888 train.py:224] Step #283: rate 0.000025, accuracy 29.69%, cross entropy 2.109223
+I0429 20:22:49.756211 139761460909888 train.py:224] Step #284: rate 0.000025, accuracy 23.44%, cross entropy 2.205769
+I0429 20:22:50.221232 139761460909888 train.py:224] Step #285: rate 0.000025, accuracy 25.78%, cross entropy 2.111212
+I0429 20:22:50.691870 139761460909888 train.py:224] Step #286: rate 0.000025, accuracy 26.56%, cross entropy 2.115614
+I0429 20:22:51.161129 139761460909888 train.py:224] Step #287: rate 0.000025, accuracy 24.22%, cross entropy 2.138477
+I0429 20:22:51.626145 139761460909888 train.py:224] Step #288: rate 0.000025, accuracy 32.81%, cross entropy 2.112560
+I0429 20:23:01.644440 139761460909888 train.py:276] Step 288: Validation accuracy = 30.70% (N=4352)
+I0429 20:23:01.900824 139761460909888 train.py:286] So far the best validation accuracy is 30.70%
+I0429 20:23:02.385445 139761460909888 train.py:224] Step #289: rate 0.000025, accuracy 31.25%, cross entropy 2.179864
+I0429 20:23:02.857703 139761460909888 train.py:224] Step #290: rate 0.000025, accuracy 28.91%, cross entropy 2.138356
+I0429 20:23:03.330206 139761460909888 train.py:224] Step #291: rate 0.000025, accuracy 22.66%, cross entropy 2.144067
+I0429 20:23:03.811650 139761460909888 train.py:224] Step #292: rate 0.000025, accuracy 21.09%, cross entropy 2.222435
+I0429 20:23:04.280703 139761460909888 train.py:224] Step #293: rate 0.000025, accuracy 27.34%, cross entropy 2.121437
+I0429 20:23:04.757124 139761460909888 train.py:224] Step #294: rate 0.000025, accuracy 21.88%, cross entropy 2.223210
+I0429 20:23:05.221820 139761460909888 train.py:224] Step #295: rate 0.000026, accuracy 33.59%, cross entropy 2.066576
+I0429 20:23:05.701217 139761460909888 train.py:224] Step #296: rate 0.000026, accuracy 26.56%, cross entropy 2.173932
+I0429 20:23:06.176545 139761460909888 train.py:224] Step #297: rate 0.000026, accuracy 28.91%, cross entropy 2.126129
+I0429 20:23:06.658639 139761460909888 train.py:224] Step #298: rate 0.000026, accuracy 36.72%, cross entropy 2.028965
+I0429 20:23:07.146504 139761460909888 train.py:224] Step #299: rate 0.000026, accuracy 27.34%, cross entropy 2.104815
+I0429 20:23:07.651128 139761460909888 train.py:224] Step #300: rate 0.000026, accuracy 32.81%, cross entropy 2.173855
+I0429 20:23:08.132882 139761460909888 train.py:224] Step #301: rate 0.000026, accuracy 32.81%, cross entropy 2.082794
+I0429 20:23:08.624143 139761460909888 train.py:224] Step #302: rate 0.000026, accuracy 17.19%, cross entropy 2.299010
+I0429 20:23:09.113705 139761460909888 train.py:224] Step #303: rate 0.000026, accuracy 31.25%, cross entropy 2.113069
+I0429 20:23:09.597026 139761460909888 train.py:224] Step #304: rate 0.000026, accuracy 33.59%, cross entropy 2.104572
+I0429 20:23:10.091623 139761460909888 train.py:224] Step #305: rate 0.000026, accuracy 18.75%, cross entropy 2.269836
+I0429 20:23:10.578973 139761460909888 train.py:224] Step #306: rate 0.000027, accuracy 28.12%, cross entropy 2.089362
+I0429 20:23:11.057944 139761460909888 train.py:224] Step #307: rate 0.000027, accuracy 25.00%, cross entropy 2.150734
+I0429 20:23:11.527916 139761460909888 train.py:224] Step #308: rate 0.000027, accuracy 34.38%, cross entropy 2.053700
+I0429 20:23:11.993811 139761460909888 train.py:224] Step #309: rate 0.000027, accuracy 26.56%, cross entropy 2.117661
+I0429 20:23:12.466132 139761460909888 train.py:224] Step #310: rate 0.000027, accuracy 32.03%, cross entropy 2.036545
+I0429 20:23:12.956076 139761460909888 train.py:224] Step #311: rate 0.000027, accuracy 25.78%, cross entropy 2.137871
+I0429 20:23:13.422433 139761460909888 train.py:224] Step #312: rate 0.000027, accuracy 31.25%, cross entropy 2.008203
+I0429 20:23:13.888740 139761460909888 train.py:224] Step #313: rate 0.000027, accuracy 29.69%, cross entropy 2.020622
+I0429 20:23:14.352204 139761460909888 train.py:224] Step #314: rate 0.000027, accuracy 36.72%, cross entropy 2.082496
+I0429 20:23:14.832753 139761460909888 train.py:224] Step #315: rate 0.000027, accuracy 22.66%, cross entropy 2.159559
+I0429 20:23:15.305647 139761460909888 train.py:224] Step #316: rate 0.000027, accuracy 25.00%, cross entropy 2.161176
+I0429 20:23:15.777176 139761460909888 train.py:224] Step #317: rate 0.000027, accuracy 28.12%, cross entropy 2.125341
+I0429 20:23:16.243451 139761460909888 train.py:224] Step #318: rate 0.000028, accuracy 22.66%, cross entropy 2.150815
+I0429 20:23:16.710566 139761460909888 train.py:224] Step #319: rate 0.000028, accuracy 28.12%, cross entropy 2.163585
+I0429 20:23:17.168846 139761460909888 train.py:224] Step #320: rate 0.000028, accuracy 36.72%, cross entropy 1.993103
+I0429 20:23:17.635938 139761460909888 train.py:224] Step #321: rate 0.000028, accuracy 39.06%, cross entropy 1.989290
+I0429 20:23:18.118750 139761460909888 train.py:224] Step #322: rate 0.000028, accuracy 25.78%, cross entropy 2.158693
+I0429 20:23:18.590197 139761460909888 train.py:224] Step #323: rate 0.000028, accuracy 30.47%, cross entropy 2.127172
+I0429 20:23:19.052950 139761460909888 train.py:224] Step #324: rate 0.000028, accuracy 39.06%, cross entropy 1.939189
+I0429 20:23:19.518356 139761460909888 train.py:224] Step #325: rate 0.000028, accuracy 34.38%, cross entropy 2.023417
+I0429 20:23:19.984744 139761460909888 train.py:224] Step #326: rate 0.000028, accuracy 26.56%, cross entropy 2.119786
+I0429 20:23:20.445566 139761460909888 train.py:224] Step #327: rate 0.000028, accuracy 37.50%, cross entropy 2.015805
+I0429 20:23:20.913114 139761460909888 train.py:224] Step #328: rate 0.000028, accuracy 21.09%, cross entropy 2.180452
+I0429 20:23:21.393308 139761460909888 train.py:224] Step #329: rate 0.000029, accuracy 21.88%, cross entropy 2.125291
+I0429 20:23:21.864225 139761460909888 train.py:224] Step #330: rate 0.000029, accuracy 30.47%, cross entropy 2.154350
+I0429 20:23:22.338924 139761460909888 train.py:224] Step #331: rate 0.000029, accuracy 32.03%, cross entropy 2.134853
+I0429 20:23:22.805115 139761460909888 train.py:224] Step #332: rate 0.000029, accuracy 21.88%, cross entropy 2.242700
+I0429 20:23:23.271450 139761460909888 train.py:224] Step #333: rate 0.000029, accuracy 29.69%, cross entropy 2.114602
+I0429 20:23:23.739865 139761460909888 train.py:224] Step #334: rate 0.000029, accuracy 34.38%, cross entropy 2.029572
+I0429 20:23:24.203202 139761460909888 train.py:224] Step #335: rate 0.000029, accuracy 27.34%, cross entropy 2.100920
+I0429 20:23:24.678397 139761460909888 train.py:224] Step #336: rate 0.000029, accuracy 17.97%, cross entropy 2.250367
+I0429 20:23:25.158810 139761460909888 train.py:224] Step #337: rate 0.000029, accuracy 15.62%, cross entropy 2.375237
+I0429 20:23:25.620067 139761460909888 train.py:224] Step #338: rate 0.000029, accuracy 32.03%, cross entropy 2.054850
+I0429 20:23:26.098708 139761460909888 train.py:224] Step #339: rate 0.000029, accuracy 35.16%, cross entropy 2.106037
+I0429 20:23:26.572113 139761460909888 train.py:224] Step #340: rate 0.000029, accuracy 29.69%, cross entropy 2.082274
+I0429 20:23:27.047422 139761460909888 train.py:224] Step #341: rate 0.000030, accuracy 31.25%, cross entropy 2.056219
+I0429 20:23:27.511491 139761460909888 train.py:224] Step #342: rate 0.000030, accuracy 22.66%, cross entropy 2.185425
+I0429 20:23:27.990552 139761460909888 train.py:224] Step #343: rate 0.000030, accuracy 30.47%, cross entropy 2.064429
+I0429 20:23:28.448485 139761460909888 train.py:224] Step #344: rate 0.000030, accuracy 39.06%, cross entropy 1.893276
+I0429 20:23:28.910033 139761460909888 train.py:224] Step #345: rate 0.000030, accuracy 32.81%, cross entropy 2.040177
+I0429 20:23:29.379266 139761460909888 train.py:224] Step #346: rate 0.000030, accuracy 32.81%, cross entropy 2.035504
+I0429 20:23:29.852188 139761460909888 train.py:224] Step #347: rate 0.000030, accuracy 35.94%, cross entropy 2.000441
+I0429 20:23:30.318982 139761460909888 train.py:224] Step #348: rate 0.000030, accuracy 33.59%, cross entropy 2.042799
+I0429 20:23:30.793129 139761460909888 train.py:224] Step #349: rate 0.000030, accuracy 29.69%, cross entropy 2.125565
+I0429 20:23:31.258978 139761460909888 train.py:224] Step #350: rate 0.000030, accuracy 35.94%, cross entropy 1.944752
+I0429 20:23:31.724517 139761460909888 train.py:224] Step #351: rate 0.000030, accuracy 33.59%, cross entropy 1.988234
+I0429 20:23:32.199392 139761460909888 train.py:224] Step #352: rate 0.000030, accuracy 27.34%, cross entropy 2.044743
+I0429 20:23:32.666751 139761460909888 train.py:224] Step #353: rate 0.000031, accuracy 29.69%, cross entropy 2.034560
+I0429 20:23:33.127003 139761460909888 train.py:224] Step #354: rate 0.000031, accuracy 32.03%, cross entropy 1.950778
+I0429 20:23:33.592962 139761460909888 train.py:224] Step #355: rate 0.000031, accuracy 33.59%, cross entropy 1.973095
+I0429 20:23:34.068025 139761460909888 train.py:224] Step #356: rate 0.000031, accuracy 17.19%, cross entropy 2.265004
+I0429 20:23:34.537365 139761460909888 train.py:224] Step #357: rate 0.000031, accuracy 36.72%, cross entropy 2.043267
+I0429 20:23:35.004623 139761460909888 train.py:224] Step #358: rate 0.000031, accuracy 32.03%, cross entropy 1.998840
+I0429 20:23:35.469093 139761460909888 train.py:224] Step #359: rate 0.000031, accuracy 37.50%, cross entropy 2.033473
+I0429 20:23:35.939240 139761460909888 train.py:224] Step #360: rate 0.000031, accuracy 17.19%, cross entropy 2.262748
+I0429 20:23:45.806731 139761460909888 train.py:276] Step 360: Validation accuracy = 38.03% (N=4352)
+I0429 20:23:46.170847 139761460909888 train.py:286] So far the best validation accuracy is 38.03%
+I0429 20:23:46.642484 139761460909888 train.py:224] Step #361: rate 0.000031, accuracy 32.03%, cross entropy 2.023434
+I0429 20:23:47.114711 139761460909888 train.py:224] Step #362: rate 0.000031, accuracy 37.50%, cross entropy 1.881699
+I0429 20:23:47.580541 139761460909888 train.py:224] Step #363: rate 0.000031, accuracy 32.03%, cross entropy 2.003622
+I0429 20:23:48.048350 139761460909888 train.py:224] Step #364: rate 0.000032, accuracy 39.06%, cross entropy 1.963425
+I0429 20:23:48.518056 139761460909888 train.py:224] Step #365: rate 0.000032, accuracy 35.16%, cross entropy 1.964911
+I0429 20:23:48.989695 139761460909888 train.py:224] Step #366: rate 0.000032, accuracy 34.38%, cross entropy 1.966289
+I0429 20:23:49.458035 139761460909888 train.py:224] Step #367: rate 0.000032, accuracy 34.38%, cross entropy 1.968035
+I0429 20:23:49.932527 139761460909888 train.py:224] Step #368: rate 0.000032, accuracy 33.59%, cross entropy 2.072698
+I0429 20:23:50.408385 139761460909888 train.py:224] Step #369: rate 0.000032, accuracy 20.31%, cross entropy 2.189937
+I0429 20:23:50.881716 139761460909888 train.py:224] Step #370: rate 0.000032, accuracy 32.03%, cross entropy 2.034971
+I0429 20:23:51.352886 139761460909888 train.py:224] Step #371: rate 0.000032, accuracy 26.56%, cross entropy 2.023388
+I0429 20:23:51.830714 139761460909888 train.py:224] Step #372: rate 0.000032, accuracy 30.47%, cross entropy 2.133886
+I0429 20:23:52.298889 139761460909888 train.py:224] Step #373: rate 0.000032, accuracy 24.22%, cross entropy 2.109959
+I0429 20:23:52.765825 139761460909888 train.py:224] Step #374: rate 0.000032, accuracy 36.72%, cross entropy 1.949515
+I0429 20:23:53.236284 139761460909888 train.py:224] Step #375: rate 0.000032, accuracy 39.06%, cross entropy 2.002781
+I0429 20:23:53.699977 139761460909888 train.py:224] Step #376: rate 0.000033, accuracy 42.97%, cross entropy 1.922203
+I0429 20:23:54.175537 139761460909888 train.py:224] Step #377: rate 0.000033, accuracy 36.72%, cross entropy 2.022918
+I0429 20:23:54.637322 139761460909888 train.py:224] Step #378: rate 0.000033, accuracy 37.50%, cross entropy 1.935571
+I0429 20:23:55.104467 139761460909888 train.py:224] Step #379: rate 0.000033, accuracy 41.41%, cross entropy 1.869287
+I0429 20:23:55.579250 139761460909888 train.py:224] Step #380: rate 0.000033, accuracy 30.47%, cross entropy 2.099812
+I0429 20:23:56.052978 139761460909888 train.py:224] Step #381: rate 0.000033, accuracy 27.34%, cross entropy 2.229753
+I0429 20:23:56.522301 139761460909888 train.py:224] Step #382: rate 0.000033, accuracy 33.59%, cross entropy 2.034439
+I0429 20:23:56.995979 139761460909888 train.py:224] Step #383: rate 0.000033, accuracy 26.56%, cross entropy 2.140662
+I0429 20:23:57.472209 139761460909888 train.py:224] Step #384: rate 0.000033, accuracy 32.81%, cross entropy 2.014024
+I0429 20:23:57.948797 139761460909888 train.py:224] Step #385: rate 0.000033, accuracy 26.56%, cross entropy 2.199764
+I0429 20:23:58.409652 139761460909888 train.py:224] Step #386: rate 0.000033, accuracy 45.31%, cross entropy 1.850666
+I0429 20:23:58.889104 139761460909888 train.py:224] Step #387: rate 0.000034, accuracy 26.56%, cross entropy 2.208311
+I0429 20:23:59.358092 139761460909888 train.py:224] Step #388: rate 0.000034, accuracy 36.72%, cross entropy 1.966873
+I0429 20:23:59.825690 139761460909888 train.py:224] Step #389: rate 0.000034, accuracy 32.81%, cross entropy 2.087608
+I0429 20:24:00.299414 139761460909888 train.py:224] Step #390: rate 0.000034, accuracy 34.38%, cross entropy 1.982947
+I0429 20:24:00.768361 139761460909888 train.py:224] Step #391: rate 0.000034, accuracy 36.72%, cross entropy 1.921783
+I0429 20:24:01.246340 139761460909888 train.py:224] Step #392: rate 0.000034, accuracy 25.78%, cross entropy 2.076218
+I0429 20:24:01.719128 139761460909888 train.py:224] Step #393: rate 0.000034, accuracy 39.06%, cross entropy 1.943258
+I0429 20:24:02.201495 139761460909888 train.py:224] Step #394: rate 0.000034, accuracy 38.28%, cross entropy 2.019833
+I0429 20:24:02.670270 139761460909888 train.py:224] Step #395: rate 0.000034, accuracy 35.16%, cross entropy 1.935827
+I0429 20:24:03.152383 139761460909888 train.py:224] Step #396: rate 0.000034, accuracy 28.91%, cross entropy 2.052378
+I0429 20:24:03.625281 139761460909888 train.py:224] Step #397: rate 0.000034, accuracy 42.19%, cross entropy 1.919616
+I0429 20:24:04.105792 139761460909888 train.py:224] Step #398: rate 0.000034, accuracy 34.38%, cross entropy 2.072812
+I0429 20:24:04.580574 139761460909888 train.py:224] Step #399: rate 0.000035, accuracy 34.38%, cross entropy 2.040849
+I0429 20:24:05.045812 139761460909888 train.py:224] Step #400: rate 0.000035, accuracy 36.72%, cross entropy 1.971781
+I0429 20:24:05.509958 139761460909888 train.py:224] Step #401: rate 0.000035, accuracy 31.25%, cross entropy 2.053015
+I0429 20:24:05.993526 139761460909888 train.py:224] Step #402: rate 0.000035, accuracy 35.94%, cross entropy 2.016139
+I0429 20:24:06.458612 139761460909888 train.py:224] Step #403: rate 0.000035, accuracy 37.50%, cross entropy 1.953678
+I0429 20:24:06.933499 139761460909888 train.py:224] Step #404: rate 0.000035, accuracy 31.25%, cross entropy 2.076016
+I0429 20:24:07.410557 139761460909888 train.py:224] Step #405: rate 0.000035, accuracy 26.56%, cross entropy 2.076791
+I0429 20:24:07.880668 139761460909888 train.py:224] Step #406: rate 0.000035, accuracy 34.38%, cross entropy 1.987127
+I0429 20:24:08.355817 139761460909888 train.py:224] Step #407: rate 0.000035, accuracy 39.84%, cross entropy 1.934311
+I0429 20:24:08.820819 139761460909888 train.py:224] Step #408: rate 0.000035, accuracy 38.28%, cross entropy 1.935074
+I0429 20:24:09.306439 139761460909888 train.py:224] Step #409: rate 0.000035, accuracy 42.19%, cross entropy 1.903237
+I0429 20:24:09.781344 139761460909888 train.py:224] Step #410: rate 0.000036, accuracy 36.72%, cross entropy 1.954384
+I0429 20:24:10.246796 139761460909888 train.py:224] Step #411: rate 0.000036, accuracy 32.81%, cross entropy 2.028189
+I0429 20:24:10.719710 139761460909888 train.py:224] Step #412: rate 0.000036, accuracy 27.34%, cross entropy 2.114409
+I0429 20:24:11.189109 139761460909888 train.py:224] Step #413: rate 0.000036, accuracy 28.91%, cross entropy 1.945498
+I0429 20:24:11.656601 139761460909888 train.py:224] Step #414: rate 0.000036, accuracy 35.16%, cross entropy 1.946943
+I0429 20:24:12.137413 139761460909888 train.py:224] Step #415: rate 0.000036, accuracy 36.72%, cross entropy 1.948282
+I0429 20:24:12.602145 139761460909888 train.py:224] Step #416: rate 0.000036, accuracy 47.66%, cross entropy 1.871067
+I0429 20:24:13.078166 139761460909888 train.py:224] Step #417: rate 0.000036, accuracy 43.75%, cross entropy 1.894943
+I0429 20:24:13.546660 139761460909888 train.py:224] Step #418: rate 0.000036, accuracy 38.28%, cross entropy 1.883333
+I0429 20:24:14.022205 139761460909888 train.py:224] Step #419: rate 0.000036, accuracy 27.34%, cross entropy 2.058451
+I0429 20:24:14.495157 139761460909888 train.py:224] Step #420: rate 0.000036, accuracy 45.31%, cross entropy 1.806534
+I0429 20:24:14.974464 139761460909888 train.py:224] Step #421: rate 0.000036, accuracy 39.84%, cross entropy 1.976904
+I0429 20:24:15.445548 139761460909888 train.py:224] Step #422: rate 0.000037, accuracy 44.53%, cross entropy 1.870757
+I0429 20:24:15.906765 139761460909888 train.py:224] Step #423: rate 0.000037, accuracy 41.41%, cross entropy 1.848004
+I0429 20:24:16.385341 139761460909888 train.py:224] Step #424: rate 0.000037, accuracy 35.94%, cross entropy 1.984662
+I0429 20:24:16.850830 139761460909888 train.py:224] Step #425: rate 0.000037, accuracy 33.59%, cross entropy 2.009330
+I0429 20:24:17.318225 139761460909888 train.py:224] Step #426: rate 0.000037, accuracy 45.31%, cross entropy 1.794575
+I0429 20:24:17.787612 139761460909888 train.py:224] Step #427: rate 0.000037, accuracy 40.62%, cross entropy 1.904820
+I0429 20:24:18.268670 139761460909888 train.py:224] Step #428: rate 0.000037, accuracy 35.16%, cross entropy 1.995274
+I0429 20:24:18.733314 139761460909888 train.py:224] Step #429: rate 0.000037, accuracy 46.88%, cross entropy 1.816685
+I0429 20:24:19.206539 139761460909888 train.py:224] Step #430: rate 0.000037, accuracy 39.06%, cross entropy 1.912801
+I0429 20:24:19.675275 139761460909888 train.py:224] Step #431: rate 0.000037, accuracy 35.16%, cross entropy 2.020366
+I0429 20:24:20.147953 139761460909888 train.py:224] Step #432: rate 0.000037, accuracy 28.91%, cross entropy 1.943706
+I0429 20:24:30.099159 139761460909888 train.py:276] Step 432: Validation accuracy = 37.82% (N=4352)
+I0429 20:24:30.099391 139761460909888 train.py:286] So far the best validation accuracy is 38.03%
+I0429 20:24:30.579304 139761460909888 train.py:224] Step #433: rate 0.000038, accuracy 28.12%, cross entropy 2.036435
+I0429 20:24:31.054513 139761460909888 train.py:224] Step #434: rate 0.000038, accuracy 25.78%, cross entropy 2.107555
+I0429 20:24:31.537825 139761460909888 train.py:224] Step #435: rate 0.000038, accuracy 42.97%, cross entropy 1.923775
+I0429 20:24:32.009521 139761460909888 train.py:224] Step #436: rate 0.000038, accuracy 37.50%, cross entropy 1.878854
+I0429 20:24:32.475309 139761460909888 train.py:224] Step #437: rate 0.000038, accuracy 42.97%, cross entropy 1.858540
+I0429 20:24:32.946586 139761460909888 train.py:224] Step #438: rate 0.000038, accuracy 36.72%, cross entropy 1.945898
+I0429 20:24:33.419244 139761460909888 train.py:224] Step #439: rate 0.000038, accuracy 35.16%, cross entropy 1.963685
+I0429 20:24:33.897555 139761460909888 train.py:224] Step #440: rate 0.000038, accuracy 31.25%, cross entropy 2.085457
+I0429 20:24:34.376196 139761460909888 train.py:224] Step #441: rate 0.000038, accuracy 39.06%, cross entropy 1.929719
+I0429 20:24:34.855058 139761460909888 train.py:224] Step #442: rate 0.000038, accuracy 37.50%, cross entropy 1.976778
+I0429 20:24:35.334060 139761460909888 train.py:224] Step #443: rate 0.000038, accuracy 36.72%, cross entropy 1.945581
+I0429 20:24:35.805308 139761460909888 train.py:224] Step #444: rate 0.000038, accuracy 35.94%, cross entropy 1.917510
+I0429 20:24:36.281478 139761460909888 train.py:224] Step #445: rate 0.000039, accuracy 39.06%, cross entropy 1.989800
+I0429 20:24:36.743528 139761460909888 train.py:224] Step #446: rate 0.000039, accuracy 39.06%, cross entropy 2.000281
+I0429 20:24:37.224174 139761460909888 train.py:224] Step #447: rate 0.000039, accuracy 38.28%, cross entropy 1.938761
+I0429 20:24:37.700087 139761460909888 train.py:224] Step #448: rate 0.000039, accuracy 19.53%, cross entropy 2.244643
+I0429 20:24:38.183630 139761460909888 train.py:224] Step #449: rate 0.000039, accuracy 21.09%, cross entropy 2.195608
+I0429 20:24:38.654675 139761460909888 train.py:224] Step #450: rate 0.000039, accuracy 30.47%, cross entropy 2.144715
+I0429 20:24:39.141380 139761460909888 train.py:224] Step #451: rate 0.000039, accuracy 40.62%, cross entropy 1.898597
+I0429 20:24:39.615726 139761460909888 train.py:224] Step #452: rate 0.000039, accuracy 42.97%, cross entropy 1.773190
+I0429 20:24:40.095008 139761460909888 train.py:224] Step #453: rate 0.000039, accuracy 40.62%, cross entropy 1.931985
+I0429 20:24:40.571167 139761460909888 train.py:224] Step #454: rate 0.000039, accuracy 49.22%, cross entropy 1.806863
+I0429 20:24:41.048430 139761460909888 train.py:224] Step #455: rate 0.000039, accuracy 40.62%, cross entropy 1.866462
+I0429 20:24:41.534513 139761460909888 train.py:224] Step #456: rate 0.000039, accuracy 45.31%, cross entropy 1.878654
+I0429 20:24:42.011652 139761460909888 train.py:224] Step #457: rate 0.000040, accuracy 37.50%, cross entropy 1.926926
+I0429 20:24:42.493925 139761460909888 train.py:224] Step #458: rate 0.000040, accuracy 33.59%, cross entropy 1.965096
+I0429 20:24:42.965573 139761460909888 train.py:224] Step #459: rate 0.000040, accuracy 46.09%, cross entropy 1.849555
+I0429 20:24:43.442452 139761460909888 train.py:224] Step #460: rate 0.000040, accuracy 35.94%, cross entropy 1.913386
+I0429 20:24:43.920739 139761460909888 train.py:224] Step #461: rate 0.000040, accuracy 33.59%, cross entropy 2.041379
+I0429 20:24:44.391309 139761460909888 train.py:224] Step #462: rate 0.000040, accuracy 28.91%, cross entropy 2.063343
+I0429 20:24:44.863326 139761460909888 train.py:224] Step #463: rate 0.000040, accuracy 42.97%, cross entropy 1.813956
+I0429 20:24:45.333717 139761460909888 train.py:224] Step #464: rate 0.000040, accuracy 39.84%, cross entropy 1.848889
+I0429 20:24:45.814564 139761460909888 train.py:224] Step #465: rate 0.000040, accuracy 39.84%, cross entropy 1.970383
+I0429 20:24:46.286224 139761460909888 train.py:224] Step #466: rate 0.000040, accuracy 31.25%, cross entropy 2.082966
+I0429 20:24:46.752781 139761460909888 train.py:224] Step #467: rate 0.000040, accuracy 32.03%, cross entropy 1.957935
+I0429 20:24:47.224108 139761460909888 train.py:224] Step #468: rate 0.000041, accuracy 45.31%, cross entropy 1.871054
+I0429 20:24:47.707225 139761460909888 train.py:224] Step #469: rate 0.000041, accuracy 40.62%, cross entropy 1.884413
+I0429 20:24:48.177556 139761460909888 train.py:224] Step #470: rate 0.000041, accuracy 37.50%, cross entropy 1.951782
+I0429 20:24:48.659473 139761460909888 train.py:224] Step #471: rate 0.000041, accuracy 36.72%, cross entropy 2.006383
+I0429 20:24:49.135617 139761460909888 train.py:224] Step #472: rate 0.000041, accuracy 33.59%, cross entropy 1.991476
+I0429 20:24:49.621387 139761460909888 train.py:224] Step #473: rate 0.000041, accuracy 41.41%, cross entropy 1.858205
+I0429 20:24:50.090977 139761460909888 train.py:224] Step #474: rate 0.000041, accuracy 39.84%, cross entropy 1.914151
+I0429 20:24:50.567077 139761460909888 train.py:224] Step #475: rate 0.000041, accuracy 41.41%, cross entropy 1.921549
+I0429 20:24:51.041639 139761460909888 train.py:224] Step #476: rate 0.000041, accuracy 37.50%, cross entropy 1.953709
+I0429 20:24:51.524861 139761460909888 train.py:224] Step #477: rate 0.000041, accuracy 33.59%, cross entropy 1.984411
+I0429 20:24:52.005655 139761460909888 train.py:224] Step #478: rate 0.000041, accuracy 41.41%, cross entropy 1.804232
+I0429 20:24:52.481732 139761460909888 train.py:224] Step #479: rate 0.000041, accuracy 42.97%, cross entropy 1.822459
+I0429 20:24:52.948791 139761460909888 train.py:224] Step #480: rate 0.000042, accuracy 30.47%, cross entropy 2.007102
+I0429 20:24:53.417901 139761460909888 train.py:224] Step #481: rate 0.000042, accuracy 43.75%, cross entropy 1.828705
+I0429 20:24:53.898638 139761460909888 train.py:224] Step #482: rate 0.000042, accuracy 35.94%, cross entropy 2.087362
+I0429 20:24:54.367079 139761460909888 train.py:224] Step #483: rate 0.000042, accuracy 35.16%, cross entropy 1.973431
+I0429 20:24:54.837826 139761460909888 train.py:224] Step #484: rate 0.000042, accuracy 41.41%, cross entropy 1.896204
+I0429 20:24:55.305007 139761460909888 train.py:224] Step #485: rate 0.000042, accuracy 52.34%, cross entropy 1.784184
+I0429 20:24:55.783026 139761460909888 train.py:224] Step #486: rate 0.000042, accuracy 47.66%, cross entropy 1.809278
+I0429 20:24:56.254286 139761460909888 train.py:224] Step #487: rate 0.000042, accuracy 44.53%, cross entropy 1.823626
+I0429 20:24:56.730606 139761460909888 train.py:224] Step #488: rate 0.000042, accuracy 32.03%, cross entropy 2.115153
+I0429 20:24:57.209580 139761460909888 train.py:224] Step #489: rate 0.000042, accuracy 25.78%, cross entropy 2.140975
+I0429 20:24:57.680507 139761460909888 train.py:224] Step #490: rate 0.000042, accuracy 38.28%, cross entropy 1.886861
+I0429 20:24:58.161791 139761460909888 train.py:224] Step #491: rate 0.000043, accuracy 28.91%, cross entropy 2.068336
+I0429 20:24:58.634822 139761460909888 train.py:224] Step #492: rate 0.000043, accuracy 46.09%, cross entropy 1.800579
+I0429 20:24:59.110248 139761460909888 train.py:224] Step #493: rate 0.000043, accuracy 37.50%, cross entropy 2.022675
+I0429 20:24:59.581253 139761460909888 train.py:224] Step #494: rate 0.000043, accuracy 39.06%, cross entropy 1.919961
+I0429 20:25:00.047227 139761460909888 train.py:224] Step #495: rate 0.000043, accuracy 36.72%, cross entropy 2.001445
+I0429 20:25:00.523425 139761460909888 train.py:224] Step #496: rate 0.000043, accuracy 45.31%, cross entropy 1.849997
+I0429 20:25:00.996789 139761460909888 train.py:224] Step #497: rate 0.000043, accuracy 37.50%, cross entropy 1.984578
+I0429 20:25:01.472120 139761460909888 train.py:224] Step #498: rate 0.000043, accuracy 50.00%, cross entropy 1.696589
+I0429 20:25:01.937205 139761460909888 train.py:224] Step #499: rate 0.000043, accuracy 42.19%, cross entropy 1.854409
+I0429 20:25:02.410837 139761460909888 train.py:224] Step #500: rate 0.000043, accuracy 45.31%, cross entropy 1.830975
+I0429 20:25:02.874485 139761460909888 train.py:224] Step #501: rate 0.000043, accuracy 39.06%, cross entropy 1.926734
+I0429 20:25:03.353631 139761460909888 train.py:224] Step #502: rate 0.000043, accuracy 32.03%, cross entropy 1.943314
+I0429 20:25:03.823117 139761460909888 train.py:224] Step #503: rate 0.000044, accuracy 39.84%, cross entropy 1.911648
+I0429 20:25:04.296072 139761460909888 train.py:224] Step #504: rate 0.000044, accuracy 39.84%, cross entropy 1.787160
+I0429 20:25:14.316882 139761460909888 train.py:276] Step 504: Validation accuracy = 46.35% (N=4352)
+I0429 20:25:14.552750 139761460909888 train.py:286] So far the best validation accuracy is 46.35%
+I0429 20:25:15.027921 139761460909888 train.py:224] Step #505: rate 0.000044, accuracy 40.62%, cross entropy 1.841992
+I0429 20:25:15.505805 139761460909888 train.py:224] Step #506: rate 0.000044, accuracy 41.41%, cross entropy 1.818835
+I0429 20:25:15.973935 139761460909888 train.py:224] Step #507: rate 0.000044, accuracy 43.75%, cross entropy 1.802020
+I0429 20:25:16.444107 139761460909888 train.py:224] Step #508: rate 0.000044, accuracy 41.41%, cross entropy 1.890650
+I0429 20:25:16.908827 139761460909888 train.py:224] Step #509: rate 0.000044, accuracy 45.31%, cross entropy 1.860283
+I0429 20:25:17.382951 139761460909888 train.py:224] Step #510: rate 0.000044, accuracy 43.75%, cross entropy 1.936351
+I0429 20:25:17.861952 139761460909888 train.py:224] Step #511: rate 0.000044, accuracy 27.34%, cross entropy 2.116154
+I0429 20:25:18.328372 139761460909888 train.py:224] Step #512: rate 0.000044, accuracy 39.84%, cross entropy 1.792102
+I0429 20:25:18.802497 139761460909888 train.py:224] Step #513: rate 0.000044, accuracy 43.75%, cross entropy 1.840602
+I0429 20:25:19.267979 139761460909888 train.py:224] Step #514: rate 0.000045, accuracy 39.06%, cross entropy 1.799695
+I0429 20:25:19.742272 139761460909888 train.py:224] Step #515: rate 0.000045, accuracy 40.62%, cross entropy 1.892836
+I0429 20:25:20.215498 139761460909888 train.py:224] Step #516: rate 0.000045, accuracy 36.72%, cross entropy 1.847846
+I0429 20:25:20.699354 139761460909888 train.py:224] Step #517: rate 0.000045, accuracy 34.38%, cross entropy 2.005774
+I0429 20:25:21.155508 139761460909888 train.py:224] Step #518: rate 0.000045, accuracy 36.72%, cross entropy 1.875244
+I0429 20:25:21.634663 139761460909888 train.py:224] Step #519: rate 0.000045, accuracy 41.41%, cross entropy 1.887407
+I0429 20:25:22.108480 139761460909888 train.py:224] Step #520: rate 0.000045, accuracy 57.03%, cross entropy 1.637614
+I0429 20:25:22.576474 139761460909888 train.py:224] Step #521: rate 0.000045, accuracy 41.41%, cross entropy 1.967211
+I0429 20:25:23.044071 139761460909888 train.py:224] Step #522: rate 0.000045, accuracy 50.78%, cross entropy 1.724414
+I0429 20:25:23.520084 139761460909888 train.py:224] Step #523: rate 0.000045, accuracy 42.97%, cross entropy 1.899976
+I0429 20:25:23.999158 139761460909888 train.py:224] Step #524: rate 0.000045, accuracy 40.62%, cross entropy 1.890566
+I0429 20:25:24.471487 139761460909888 train.py:224] Step #525: rate 0.000045, accuracy 39.84%, cross entropy 1.861516
+I0429 20:25:24.940182 139761460909888 train.py:224] Step #526: rate 0.000046, accuracy 50.78%, cross entropy 1.658111
+I0429 20:25:25.421772 139761460909888 train.py:224] Step #527: rate 0.000046, accuracy 33.59%, cross entropy 1.962057
+I0429 20:25:25.888172 139761460909888 train.py:224] Step #528: rate 0.000046, accuracy 52.34%, cross entropy 1.735747
+I0429 20:25:26.359597 139761460909888 train.py:224] Step #529: rate 0.000046, accuracy 45.31%, cross entropy 1.778073
+I0429 20:25:26.829432 139761460909888 train.py:224] Step #530: rate 0.000046, accuracy 45.31%, cross entropy 1.739573
+I0429 20:25:27.301721 139761460909888 train.py:224] Step #531: rate 0.000046, accuracy 48.44%, cross entropy 1.726673
+I0429 20:25:27.769236 139761460909888 train.py:224] Step #532: rate 0.000046, accuracy 35.94%, cross entropy 1.972066
+I0429 20:25:28.251716 139761460909888 train.py:224] Step #533: rate 0.000046, accuracy 49.22%, cross entropy 1.812860
+I0429 20:25:28.730639 139761460909888 train.py:224] Step #534: rate 0.000046, accuracy 29.69%, cross entropy 2.158239
+I0429 20:25:29.201527 139761460909888 train.py:224] Step #535: rate 0.000046, accuracy 46.88%, cross entropy 1.737421
+I0429 20:25:29.676751 139761460909888 train.py:224] Step #536: rate 0.000046, accuracy 42.19%, cross entropy 1.780647
+I0429 20:25:30.154484 139761460909888 train.py:224] Step #537: rate 0.000046, accuracy 47.66%, cross entropy 1.767361
+I0429 20:25:30.623614 139761460909888 train.py:224] Step #538: rate 0.000047, accuracy 42.19%, cross entropy 1.914373
+I0429 20:25:31.091805 139761460909888 train.py:224] Step #539: rate 0.000047, accuracy 45.31%, cross entropy 1.734269
+I0429 20:25:31.563053 139761460909888 train.py:224] Step #540: rate 0.000047, accuracy 39.84%, cross entropy 1.888589
+I0429 20:25:32.034807 139761460909888 train.py:224] Step #541: rate 0.000047, accuracy 34.38%, cross entropy 1.852868
+I0429 20:25:32.510205 139761460909888 train.py:224] Step #542: rate 0.000047, accuracy 34.38%, cross entropy 2.008816
+I0429 20:25:32.983466 139761460909888 train.py:224] Step #543: rate 0.000047, accuracy 45.31%, cross entropy 1.784341
+I0429 20:25:33.453521 139761460909888 train.py:224] Step #544: rate 0.000047, accuracy 53.12%, cross entropy 1.691191
+I0429 20:25:33.927712 139761460909888 train.py:224] Step #545: rate 0.000047, accuracy 47.66%, cross entropy 1.853996
+I0429 20:25:34.410942 139761460909888 train.py:224] Step #546: rate 0.000047, accuracy 21.09%, cross entropy 2.378193
+I0429 20:25:34.881724 139761460909888 train.py:224] Step #547: rate 0.000047, accuracy 28.12%, cross entropy 2.192817
+I0429 20:25:35.347055 139761460909888 train.py:224] Step #548: rate 0.000047, accuracy 44.53%, cross entropy 1.837687
+I0429 20:25:35.828915 139761460909888 train.py:224] Step #549: rate 0.000048, accuracy 53.12%, cross entropy 1.690518
+I0429 20:25:36.309089 139761460909888 train.py:224] Step #550: rate 0.000048, accuracy 46.09%, cross entropy 1.823775
+I0429 20:25:36.790701 139761460909888 train.py:224] Step #551: rate 0.000048, accuracy 43.75%, cross entropy 1.849105
+I0429 20:25:37.270090 139761460909888 train.py:224] Step #552: rate 0.000048, accuracy 47.66%, cross entropy 1.758569
+I0429 20:25:37.743937 139761460909888 train.py:224] Step #553: rate 0.000048, accuracy 44.53%, cross entropy 1.832576
+I0429 20:25:38.210437 139761460909888 train.py:224] Step #554: rate 0.000048, accuracy 31.25%, cross entropy 2.120420
+I0429 20:25:38.687661 139761460909888 train.py:224] Step #555: rate 0.000048, accuracy 60.16%, cross entropy 1.634180
+I0429 20:25:39.163491 139761460909888 train.py:224] Step #556: rate 0.000048, accuracy 54.69%, cross entropy 1.702672
+I0429 20:25:39.632605 139761460909888 train.py:224] Step #557: rate 0.000048, accuracy 47.66%, cross entropy 1.733524
+I0429 20:25:40.111787 139761460909888 train.py:224] Step #558: rate 0.000048, accuracy 40.62%, cross entropy 1.858925
+I0429 20:25:40.583834 139761460909888 train.py:224] Step #559: rate 0.000048, accuracy 47.66%, cross entropy 1.680674
+I0429 20:25:41.059727 139761460909888 train.py:224] Step #560: rate 0.000048, accuracy 46.09%, cross entropy 1.789666
+I0429 20:25:41.527317 139761460909888 train.py:224] Step #561: rate 0.000049, accuracy 46.09%, cross entropy 1.749848
+I0429 20:25:42.003296 139761460909888 train.py:224] Step #562: rate 0.000049, accuracy 36.72%, cross entropy 1.969865
+I0429 20:25:42.475754 139761460909888 train.py:224] Step #563: rate 0.000049, accuracy 50.00%, cross entropy 1.722958
+I0429 20:25:42.947798 139761460909888 train.py:224] Step #564: rate 0.000049, accuracy 49.22%, cross entropy 1.726099
+I0429 20:25:43.417588 139761460909888 train.py:224] Step #565: rate 0.000049, accuracy 37.50%, cross entropy 1.892031
+I0429 20:25:43.888149 139761460909888 train.py:224] Step #566: rate 0.000049, accuracy 53.91%, cross entropy 1.580206
+I0429 20:25:44.358689 139761460909888 train.py:224] Step #567: rate 0.000049, accuracy 56.25%, cross entropy 1.594194
+I0429 20:25:44.839484 139761460909888 train.py:224] Step #568: rate 0.000049, accuracy 42.97%, cross entropy 1.840717
+I0429 20:25:45.311912 139761460909888 train.py:224] Step #569: rate 0.000049, accuracy 49.22%, cross entropy 1.651227
+I0429 20:25:45.800825 139761460909888 train.py:224] Step #570: rate 0.000049, accuracy 52.34%, cross entropy 1.702042
+I0429 20:25:46.265757 139761460909888 train.py:224] Step #571: rate 0.000049, accuracy 52.34%, cross entropy 1.683815
+I0429 20:25:46.736249 139761460909888 train.py:224] Step #572: rate 0.000050, accuracy 42.19%, cross entropy 1.776992
+I0429 20:25:47.204547 139761460909888 train.py:224] Step #573: rate 0.000050, accuracy 26.56%, cross entropy 2.173505
+I0429 20:25:47.677064 139761460909888 train.py:224] Step #574: rate 0.000050, accuracy 45.31%, cross entropy 1.718984
+I0429 20:25:48.144148 139761460909888 train.py:224] Step #575: rate 0.000050, accuracy 35.94%, cross entropy 1.902575
+I0429 20:25:48.612430 139761460909888 train.py:224] Step #576: rate 0.000050, accuracy 50.78%, cross entropy 1.733133
+I0429 20:25:58.533819 139761460909888 train.py:276] Step 576: Validation accuracy = 56.30% (N=4352)
+I0429 20:25:58.755103 139761460909888 train.py:286] So far the best validation accuracy is 56.30%
+I0429 20:25:59.227275 139761460909888 train.py:224] Step #577: rate 0.000050, accuracy 41.41%, cross entropy 1.762908
+I0429 20:25:59.696586 139761460909888 train.py:224] Step #578: rate 0.000050, accuracy 32.03%, cross entropy 1.986480
+I0429 20:26:00.162005 139761460909888 train.py:224] Step #579: rate 0.000050, accuracy 48.44%, cross entropy 1.695046
+I0429 20:26:00.633005 139761460909888 train.py:224] Step #580: rate 0.000050, accuracy 51.56%, cross entropy 1.682793
+I0429 20:26:01.111759 139761460909888 train.py:224] Step #581: rate 0.000050, accuracy 44.53%, cross entropy 1.822731
+I0429 20:26:01.584014 139761460909888 train.py:224] Step #582: rate 0.000050, accuracy 42.19%, cross entropy 1.782446
+I0429 20:26:02.057152 139761460909888 train.py:224] Step #583: rate 0.000050, accuracy 46.88%, cross entropy 1.759693
+I0429 20:26:02.527570 139761460909888 train.py:224] Step #584: rate 0.000051, accuracy 44.53%, cross entropy 1.821213
+I0429 20:26:03.000742 139761460909888 train.py:224] Step #585: rate 0.000051, accuracy 33.59%, cross entropy 2.083223
+I0429 20:26:03.470716 139761460909888 train.py:224] Step #586: rate 0.000051, accuracy 42.97%, cross entropy 1.783935
+I0429 20:26:03.935730 139761460909888 train.py:224] Step #587: rate 0.000051, accuracy 55.47%, cross entropy 1.600773
+I0429 20:26:04.410174 139761460909888 train.py:224] Step #588: rate 0.000051, accuracy 28.91%, cross entropy 2.101138
+I0429 20:26:04.899361 139761460909888 train.py:224] Step #589: rate 0.000051, accuracy 35.16%, cross entropy 1.967425
+I0429 20:26:05.368293 139761460909888 train.py:224] Step #590: rate 0.000051, accuracy 59.38%, cross entropy 1.595876
+I0429 20:26:05.841500 139761460909888 train.py:224] Step #591: rate 0.000051, accuracy 45.31%, cross entropy 1.802213
+I0429 20:26:06.313447 139761460909888 train.py:224] Step #592: rate 0.000051, accuracy 48.44%, cross entropy 1.663298
+I0429 20:26:06.787854 139761460909888 train.py:224] Step #593: rate 0.000051, accuracy 47.66%, cross entropy 1.668064
+I0429 20:26:07.258812 139761460909888 train.py:224] Step #594: rate 0.000051, accuracy 47.66%, cross entropy 1.748345
+I0429 20:26:07.731083 139761460909888 train.py:224] Step #595: rate 0.000051, accuracy 53.12%, cross entropy 1.679132
+I0429 20:26:08.209686 139761460909888 train.py:224] Step #596: rate 0.000052, accuracy 52.34%, cross entropy 1.764136
+I0429 20:26:08.682007 139761460909888 train.py:224] Step #597: rate 0.000052, accuracy 34.38%, cross entropy 2.024902
+I0429 20:26:09.139491 139761460909888 train.py:224] Step #598: rate 0.000052, accuracy 60.94%, cross entropy 1.471627
+I0429 20:26:09.616454 139761460909888 train.py:224] Step #599: rate 0.000052, accuracy 43.75%, cross entropy 1.762423
+I0429 20:26:10.093261 139761460909888 train.py:224] Step #600: rate 0.000052, accuracy 47.66%, cross entropy 1.787428
+I0429 20:26:10.556651 139761460909888 train.py:224] Step #601: rate 0.000052, accuracy 33.59%, cross entropy 2.090604
+I0429 20:26:11.030544 139761460909888 train.py:224] Step #602: rate 0.000052, accuracy 47.66%, cross entropy 1.744943
+I0429 20:26:11.508042 139761460909888 train.py:224] Step #603: rate 0.000052, accuracy 37.50%, cross entropy 1.957561
+I0429 20:26:11.994848 139761460909888 train.py:224] Step #604: rate 0.000052, accuracy 46.88%, cross entropy 1.787448
+I0429 20:26:12.469408 139761460909888 train.py:224] Step #605: rate 0.000052, accuracy 61.72%, cross entropy 1.582364
+I0429 20:26:12.940431 139761460909888 train.py:224] Step #606: rate 0.000052, accuracy 41.41%, cross entropy 1.841252
+I0429 20:26:13.413940 139761460909888 train.py:224] Step #607: rate 0.000053, accuracy 54.69%, cross entropy 1.630003
+I0429 20:26:13.886186 139761460909888 train.py:224] Step #608: rate 0.000053, accuracy 38.28%, cross entropy 1.868568
+I0429 20:26:14.351978 139761460909888 train.py:224] Step #609: rate 0.000053, accuracy 37.50%, cross entropy 1.910143
+I0429 20:26:14.835617 139761460909888 train.py:224] Step #610: rate 0.000053, accuracy 45.31%, cross entropy 1.766998
+I0429 20:26:15.313218 139761460909888 train.py:224] Step #611: rate 0.000053, accuracy 51.56%, cross entropy 1.671317
+I0429 20:26:15.773911 139761460909888 train.py:224] Step #612: rate 0.000053, accuracy 45.31%, cross entropy 1.772455
+I0429 20:26:16.253974 139761460909888 train.py:224] Step #613: rate 0.000053, accuracy 43.75%, cross entropy 1.822521
+I0429 20:26:16.721714 139761460909888 train.py:224] Step #614: rate 0.000053, accuracy 45.31%, cross entropy 1.820133
+I0429 20:26:17.187081 139761460909888 train.py:224] Step #615: rate 0.000053, accuracy 47.66%, cross entropy 1.811332
+I0429 20:26:17.657558 139761460909888 train.py:224] Step #616: rate 0.000053, accuracy 39.84%, cross entropy 1.868931
+I0429 20:26:18.135593 139761460909888 train.py:224] Step #617: rate 0.000053, accuracy 52.34%, cross entropy 1.704758
+I0429 20:26:18.613651 139761460909888 train.py:224] Step #618: rate 0.000053, accuracy 54.69%, cross entropy 1.645814
+I0429 20:26:19.101580 139761460909888 train.py:224] Step #619: rate 0.000054, accuracy 52.34%, cross entropy 1.674751
+I0429 20:26:19.575368 139761460909888 train.py:224] Step #620: rate 0.000054, accuracy 29.69%, cross entropy 2.063530
+I0429 20:26:20.045760 139761460909888 train.py:224] Step #621: rate 0.000054, accuracy 53.12%, cross entropy 1.542778
+I0429 20:26:20.520995 139761460909888 train.py:224] Step #622: rate 0.000054, accuracy 50.78%, cross entropy 1.794439
+I0429 20:26:20.998632 139761460909888 train.py:224] Step #623: rate 0.000054, accuracy 49.22%, cross entropy 1.745351
+I0429 20:26:21.477128 139761460909888 train.py:224] Step #624: rate 0.000054, accuracy 53.91%, cross entropy 1.669347
+I0429 20:26:21.962329 139761460909888 train.py:224] Step #625: rate 0.000054, accuracy 57.81%, cross entropy 1.626797
+I0429 20:26:22.449207 139761460909888 train.py:224] Step #626: rate 0.000054, accuracy 61.72%, cross entropy 1.521488
+I0429 20:26:22.930376 139761460909888 train.py:224] Step #627: rate 0.000054, accuracy 42.19%, cross entropy 1.940631
+I0429 20:26:23.407046 139761460909888 train.py:224] Step #628: rate 0.000054, accuracy 53.12%, cross entropy 1.551992
+I0429 20:26:23.891222 139761460909888 train.py:224] Step #629: rate 0.000054, accuracy 53.91%, cross entropy 1.645033
+I0429 20:26:24.365165 139761460909888 train.py:224] Step #630: rate 0.000055, accuracy 36.72%, cross entropy 1.886371
+I0429 20:26:24.846556 139761460909888 train.py:224] Step #631: rate 0.000055, accuracy 59.38%, cross entropy 1.523452
+I0429 20:26:25.318631 139761460909888 train.py:224] Step #632: rate 0.000055, accuracy 54.69%, cross entropy 1.653547
+I0429 20:26:25.789575 139761460909888 train.py:224] Step #633: rate 0.000055, accuracy 34.38%, cross entropy 2.074000
+I0429 20:26:26.265319 139761460909888 train.py:224] Step #634: rate 0.000055, accuracy 48.44%, cross entropy 1.727125
+I0429 20:26:26.743989 139761460909888 train.py:224] Step #635: rate 0.000055, accuracy 51.56%, cross entropy 1.602600
+I0429 20:26:27.218645 139761460909888 train.py:224] Step #636: rate 0.000055, accuracy 35.94%, cross entropy 1.999708
+I0429 20:26:27.697534 139761460909888 train.py:224] Step #637: rate 0.000055, accuracy 57.81%, cross entropy 1.623980
+I0429 20:26:28.174777 139761460909888 train.py:224] Step #638: rate 0.000055, accuracy 42.97%, cross entropy 1.806311
+I0429 20:26:28.646626 139761460909888 train.py:224] Step #639: rate 0.000055, accuracy 50.00%, cross entropy 1.771028
+I0429 20:26:29.117817 139761460909888 train.py:224] Step #640: rate 0.000055, accuracy 58.59%, cross entropy 1.516274
+I0429 20:26:29.596110 139761460909888 train.py:224] Step #641: rate 0.000055, accuracy 50.00%, cross entropy 1.647835
+I0429 20:26:30.062283 139761460909888 train.py:224] Step #642: rate 0.000056, accuracy 58.59%, cross entropy 1.586754
+I0429 20:26:30.532567 139761460909888 train.py:224] Step #643: rate 0.000056, accuracy 46.09%, cross entropy 1.962131
+I0429 20:26:31.012498 139761460909888 train.py:224] Step #644: rate 0.000056, accuracy 42.97%, cross entropy 1.779619
+I0429 20:26:31.497745 139761460909888 train.py:224] Step #645: rate 0.000056, accuracy 49.22%, cross entropy 1.710046
+I0429 20:26:31.968995 139761460909888 train.py:224] Step #646: rate 0.000056, accuracy 60.16%, cross entropy 1.551447
+I0429 20:26:32.443782 139761460909888 train.py:224] Step #647: rate 0.000056, accuracy 36.72%, cross entropy 1.986416
+I0429 20:26:32.911866 139761460909888 train.py:224] Step #648: rate 0.000056, accuracy 45.31%, cross entropy 1.795947
+I0429 20:26:42.924572 139761460909888 train.py:276] Step 648: Validation accuracy = 63.47% (N=4352)
+I0429 20:26:43.144366 139761460909888 train.py:286] So far the best validation accuracy is 63.47%
+I0429 20:26:43.621906 139761460909888 train.py:224] Step #649: rate 0.000056, accuracy 41.41%, cross entropy 1.886549
+I0429 20:26:44.097436 139761460909888 train.py:224] Step #650: rate 0.000056, accuracy 47.66%, cross entropy 1.669576
+I0429 20:26:44.567547 139761460909888 train.py:224] Step #651: rate 0.000056, accuracy 39.06%, cross entropy 1.758874
+I0429 20:26:45.034245 139761460909888 train.py:224] Step #652: rate 0.000056, accuracy 58.59%, cross entropy 1.571593
+I0429 20:26:45.505091 139761460909888 train.py:224] Step #653: rate 0.000056, accuracy 59.38%, cross entropy 1.546576
+I0429 20:26:45.974005 139761460909888 train.py:224] Step #654: rate 0.000057, accuracy 52.34%, cross entropy 1.684498
+I0429 20:26:46.452431 139761460909888 train.py:224] Step #655: rate 0.000057, accuracy 42.97%, cross entropy 1.781891
+I0429 20:26:46.917358 139761460909888 train.py:224] Step #656: rate 0.000057, accuracy 57.03%, cross entropy 1.631085
+I0429 20:26:47.399691 139761460909888 train.py:224] Step #657: rate 0.000057, accuracy 32.81%, cross entropy 2.173372
+I0429 20:26:47.867669 139761460909888 train.py:224] Step #658: rate 0.000057, accuracy 53.12%, cross entropy 1.563112
+I0429 20:26:48.350998 139761460909888 train.py:224] Step #659: rate 0.000057, accuracy 39.06%, cross entropy 1.831700
+I0429 20:26:48.825371 139761460909888 train.py:224] Step #660: rate 0.000057, accuracy 37.50%, cross entropy 1.989060
+I0429 20:26:49.305869 139761460909888 train.py:224] Step #661: rate 0.000057, accuracy 44.53%, cross entropy 1.737330
+I0429 20:26:49.776881 139761460909888 train.py:224] Step #662: rate 0.000057, accuracy 42.19%, cross entropy 1.711678
+I0429 20:26:50.245955 139761460909888 train.py:224] Step #663: rate 0.000057, accuracy 50.78%, cross entropy 1.616816
+I0429 20:26:50.713325 139761460909888 train.py:224] Step #664: rate 0.000057, accuracy 45.31%, cross entropy 1.870932
+I0429 20:26:51.184587 139761460909888 train.py:224] Step #665: rate 0.000058, accuracy 54.69%, cross entropy 1.575058
+I0429 20:26:51.657482 139761460909888 train.py:224] Step #666: rate 0.000058, accuracy 43.75%, cross entropy 1.806774
+I0429 20:26:52.118007 139761460909888 train.py:224] Step #667: rate 0.000058, accuracy 48.44%, cross entropy 1.817858
+I0429 20:26:52.591575 139761460909888 train.py:224] Step #668: rate 0.000058, accuracy 53.12%, cross entropy 1.592263
+I0429 20:26:53.066377 139761460909888 train.py:224] Step #669: rate 0.000058, accuracy 52.34%, cross entropy 1.651816
+I0429 20:26:53.551244 139761460909888 train.py:224] Step #670: rate 0.000058, accuracy 29.69%, cross entropy 2.197569
+I0429 20:26:54.018043 139761460909888 train.py:224] Step #671: rate 0.000058, accuracy 46.88%, cross entropy 1.789685
+I0429 20:26:54.505243 139761460909888 train.py:224] Step #672: rate 0.000058, accuracy 42.97%, cross entropy 1.715092
+I0429 20:26:54.984651 139761460909888 train.py:224] Step #673: rate 0.000058, accuracy 50.78%, cross entropy 1.688025
+I0429 20:26:55.458015 139761460909888 train.py:224] Step #674: rate 0.000058, accuracy 60.16%, cross entropy 1.502760
+I0429 20:26:55.924141 139761460909888 train.py:224] Step #675: rate 0.000058, accuracy 26.56%, cross entropy 2.109839
+I0429 20:26:56.392359 139761460909888 train.py:224] Step #676: rate 0.000058, accuracy 57.03%, cross entropy 1.617765
+I0429 20:26:56.867650 139761460909888 train.py:224] Step #677: rate 0.000059, accuracy 62.50%, cross entropy 1.501719
+I0429 20:26:57.341317 139761460909888 train.py:224] Step #678: rate 0.000059, accuracy 60.94%, cross entropy 1.481671
+I0429 20:26:57.817527 139761460909888 train.py:224] Step #679: rate 0.000059, accuracy 43.75%, cross entropy 1.814644
+I0429 20:26:58.294076 139761460909888 train.py:224] Step #680: rate 0.000059, accuracy 62.50%, cross entropy 1.502137
+I0429 20:26:58.770282 139761460909888 train.py:224] Step #681: rate 0.000059, accuracy 43.75%, cross entropy 1.792428
+I0429 20:26:59.249513 139761460909888 train.py:224] Step #682: rate 0.000059, accuracy 54.69%, cross entropy 1.626839
+I0429 20:26:59.719230 139761460909888 train.py:224] Step #683: rate 0.000059, accuracy 27.34%, cross entropy 2.181529
+I0429 20:27:00.202225 139761460909888 train.py:224] Step #684: rate 0.000059, accuracy 52.34%, cross entropy 1.710005
+I0429 20:27:00.678003 139761460909888 train.py:224] Step #685: rate 0.000059, accuracy 56.25%, cross entropy 1.675309
+I0429 20:27:01.156097 139761460909888 train.py:224] Step #686: rate 0.000059, accuracy 60.16%, cross entropy 1.588606
+I0429 20:27:01.632293 139761460909888 train.py:224] Step #687: rate 0.000059, accuracy 53.12%, cross entropy 1.663475
+I0429 20:27:02.108314 139761460909888 train.py:224] Step #688: rate 0.000060, accuracy 51.56%, cross entropy 1.642193
+I0429 20:27:02.572514 139761460909888 train.py:224] Step #689: rate 0.000060, accuracy 56.25%, cross entropy 1.660923
+I0429 20:27:03.047245 139761460909888 train.py:224] Step #690: rate 0.000060, accuracy 35.16%, cross entropy 1.989092
+I0429 20:27:03.520933 139761460909888 train.py:224] Step #691: rate 0.000060, accuracy 57.81%, cross entropy 1.492303
+I0429 20:27:03.996223 139761460909888 train.py:224] Step #692: rate 0.000060, accuracy 51.56%, cross entropy 1.741735
+I0429 20:27:04.464943 139761460909888 train.py:224] Step #693: rate 0.000060, accuracy 55.47%, cross entropy 1.647292
+I0429 20:27:04.933803 139761460909888 train.py:224] Step #694: rate 0.000060, accuracy 53.91%, cross entropy 1.624337
+I0429 20:27:05.411385 139761460909888 train.py:224] Step #695: rate 0.000060, accuracy 48.44%, cross entropy 1.864816
+I0429 20:27:05.883060 139761460909888 train.py:224] Step #696: rate 0.000060, accuracy 53.91%, cross entropy 1.592469
+I0429 20:27:06.361877 139761460909888 train.py:224] Step #697: rate 0.000060, accuracy 55.47%, cross entropy 1.607635
+I0429 20:27:06.831653 139761460909888 train.py:224] Step #698: rate 0.000060, accuracy 50.00%, cross entropy 1.658409
+I0429 20:27:07.305303 139761460909888 train.py:224] Step #699: rate 0.000060, accuracy 53.12%, cross entropy 1.557922
+I0429 20:27:07.778004 139761460909888 train.py:224] Step #700: rate 0.000061, accuracy 46.88%, cross entropy 1.690104
+I0429 20:27:08.246347 139761460909888 train.py:224] Step #701: rate 0.000061, accuracy 64.06%, cross entropy 1.399733
+I0429 20:27:08.714951 139761460909888 train.py:224] Step #702: rate 0.000061, accuracy 44.53%, cross entropy 1.797538
+I0429 20:27:09.193934 139761460909888 train.py:224] Step #703: rate 0.000061, accuracy 47.66%, cross entropy 1.765146
+I0429 20:27:09.661546 139761460909888 train.py:224] Step #704: rate 0.000061, accuracy 71.09%, cross entropy 1.405844
+I0429 20:27:10.130596 139761460909888 train.py:224] Step #705: rate 0.000061, accuracy 53.91%, cross entropy 1.703887
+I0429 20:27:10.606814 139761460909888 train.py:224] Step #706: rate 0.000061, accuracy 63.28%, cross entropy 1.462367
+I0429 20:27:11.075122 139761460909888 train.py:224] Step #707: rate 0.000061, accuracy 67.97%, cross entropy 1.445992
+I0429 20:27:11.551472 139761460909888 train.py:224] Step #708: rate 0.000061, accuracy 58.59%, cross entropy 1.498693
+I0429 20:27:12.029608 139761460909888 train.py:224] Step #709: rate 0.000061, accuracy 28.91%, cross entropy 2.132206
+I0429 20:27:12.514873 139761460909888 train.py:224] Step #710: rate 0.000061, accuracy 42.97%, cross entropy 1.830434
+I0429 20:27:12.984916 139761460909888 train.py:224] Step #711: rate 0.000061, accuracy 49.22%, cross entropy 1.784916
+I0429 20:27:13.458763 139761460909888 train.py:224] Step #712: rate 0.000062, accuracy 57.03%, cross entropy 1.564039
+I0429 20:27:13.938537 139761460909888 train.py:224] Step #713: rate 0.000062, accuracy 45.31%, cross entropy 1.688731
+I0429 20:27:14.413644 139761460909888 train.py:224] Step #714: rate 0.000062, accuracy 49.22%, cross entropy 1.712944
+I0429 20:27:14.884820 139761460909888 train.py:224] Step #715: rate 0.000062, accuracy 56.25%, cross entropy 1.627242
+I0429 20:27:15.361816 139761460909888 train.py:224] Step #716: rate 0.000062, accuracy 49.22%, cross entropy 1.720089
+I0429 20:27:15.838831 139761460909888 train.py:224] Step #717: rate 0.000062, accuracy 50.78%, cross entropy 1.678134
+I0429 20:27:16.310061 139761460909888 train.py:224] Step #718: rate 0.000062, accuracy 64.84%, cross entropy 1.425473
+I0429 20:27:16.786364 139761460909888 train.py:224] Step #719: rate 0.000062, accuracy 63.28%, cross entropy 1.481594
+I0429 20:27:17.259855 139761460909888 train.py:224] Step #720: rate 0.000062, accuracy 64.06%, cross entropy 1.495393
+I0429 20:27:27.297284 139761460909888 train.py:276] Step 720: Validation accuracy = 66.73% (N=4352)
+I0429 20:27:27.523843 139761460909888 train.py:286] So far the best validation accuracy is 66.73%
+I0429 20:27:27.996495 139761460909888 train.py:224] Step #721: rate 0.000062, accuracy 41.41%, cross entropy 1.905141
+I0429 20:27:28.481214 139761460909888 train.py:224] Step #722: rate 0.000062, accuracy 56.25%, cross entropy 1.612358
+I0429 20:27:28.957127 139761460909888 train.py:224] Step #723: rate 0.000063, accuracy 42.19%, cross entropy 1.824541
+I0429 20:27:29.439903 139761460909888 train.py:224] Step #724: rate 0.000063, accuracy 42.97%, cross entropy 1.762339
+I0429 20:27:29.912462 139761460909888 train.py:224] Step #725: rate 0.000063, accuracy 48.44%, cross entropy 1.693887
+I0429 20:27:30.387438 139761460909888 train.py:224] Step #726: rate 0.000063, accuracy 58.59%, cross entropy 1.518162
+I0429 20:27:30.869341 139761460909888 train.py:224] Step #727: rate 0.000063, accuracy 47.66%, cross entropy 1.647478
+I0429 20:27:31.346801 139761460909888 train.py:224] Step #728: rate 0.000063, accuracy 54.69%, cross entropy 1.625136
+I0429 20:27:31.832518 139761460909888 train.py:224] Step #729: rate 0.000063, accuracy 56.25%, cross entropy 1.671091
+I0429 20:27:32.313427 139761460909888 train.py:224] Step #730: rate 0.000063, accuracy 50.78%, cross entropy 1.699519
+I0429 20:27:32.793942 139761460909888 train.py:224] Step #731: rate 0.000063, accuracy 23.44%, cross entropy 2.202750
+I0429 20:27:33.273285 139761460909888 train.py:224] Step #732: rate 0.000063, accuracy 50.00%, cross entropy 1.709377
+I0429 20:27:33.759206 139761460909888 train.py:224] Step #733: rate 0.000063, accuracy 32.03%, cross entropy 2.092530
+I0429 20:27:34.228594 139761460909888 train.py:224] Step #734: rate 0.000063, accuracy 57.81%, cross entropy 1.530863
+I0429 20:27:34.702285 139761460909888 train.py:224] Step #735: rate 0.000064, accuracy 55.47%, cross entropy 1.620751
+I0429 20:27:35.175533 139761460909888 train.py:224] Step #736: rate 0.000064, accuracy 42.97%, cross entropy 1.822807
+I0429 20:27:35.657104 139761460909888 train.py:224] Step #737: rate 0.000064, accuracy 53.12%, cross entropy 1.584731
+I0429 20:27:36.130722 139761460909888 train.py:224] Step #738: rate 0.000064, accuracy 60.94%, cross entropy 1.485559
+I0429 20:27:36.601753 139761460909888 train.py:224] Step #739: rate 0.000064, accuracy 57.03%, cross entropy 1.584491
+I0429 20:27:37.075356 139761460909888 train.py:224] Step #740: rate 0.000064, accuracy 53.12%, cross entropy 1.596818
+I0429 20:27:37.547410 139761460909888 train.py:224] Step #741: rate 0.000064, accuracy 54.69%, cross entropy 1.589633
+I0429 20:27:38.026118 139761460909888 train.py:224] Step #742: rate 0.000064, accuracy 37.50%, cross entropy 1.925681
+I0429 20:27:38.500664 139761460909888 train.py:224] Step #743: rate 0.000064, accuracy 60.16%, cross entropy 1.520292
+I0429 20:27:38.974033 139761460909888 train.py:224] Step #744: rate 0.000064, accuracy 58.59%, cross entropy 1.505402
+I0429 20:27:39.453621 139761460909888 train.py:224] Step #745: rate 0.000064, accuracy 32.03%, cross entropy 2.122260
+I0429 20:27:39.923662 139761460909888 train.py:224] Step #746: rate 0.000065, accuracy 57.03%, cross entropy 1.608620
+I0429 20:27:40.397090 139761460909888 train.py:224] Step #747: rate 0.000065, accuracy 37.50%, cross entropy 1.798998
+I0429 20:27:40.872107 139761460909888 train.py:224] Step #748: rate 0.000065, accuracy 60.94%, cross entropy 1.462944
+I0429 20:27:41.346155 139761460909888 train.py:224] Step #749: rate 0.000065, accuracy 52.34%, cross entropy 1.606477
+I0429 20:27:41.825354 139761460909888 train.py:224] Step #750: rate 0.000065, accuracy 54.69%, cross entropy 1.545115
+I0429 20:27:42.289249 139761460909888 train.py:224] Step #751: rate 0.000065, accuracy 59.38%, cross entropy 1.544033
+I0429 20:27:42.758607 139761460909888 train.py:224] Step #752: rate 0.000065, accuracy 39.06%, cross entropy 1.896514
+I0429 20:27:43.231796 139761460909888 train.py:224] Step #753: rate 0.000065, accuracy 57.03%, cross entropy 1.552797
+I0429 20:27:43.716986 139761460909888 train.py:224] Step #754: rate 0.000065, accuracy 46.88%, cross entropy 1.772842
+I0429 20:27:44.192966 139761460909888 train.py:224] Step #755: rate 0.000065, accuracy 52.34%, cross entropy 1.640776
+I0429 20:27:44.665201 139761460909888 train.py:224] Step #756: rate 0.000065, accuracy 57.03%, cross entropy 1.569398
+I0429 20:27:45.134802 139761460909888 train.py:224] Step #757: rate 0.000065, accuracy 59.38%, cross entropy 1.540322
+I0429 20:27:45.608500 139761460909888 train.py:224] Step #758: rate 0.000066, accuracy 56.25%, cross entropy 1.604796
+I0429 20:27:46.079138 139761460909888 train.py:224] Step #759: rate 0.000066, accuracy 54.69%, cross entropy 1.528490
+I0429 20:27:46.561941 139761460909888 train.py:224] Step #760: rate 0.000066, accuracy 43.75%, cross entropy 1.840703
+I0429 20:27:47.045307 139761460909888 train.py:224] Step #761: rate 0.000066, accuracy 52.34%, cross entropy 1.782192
+I0429 20:27:47.513010 139761460909888 train.py:224] Step #762: rate 0.000066, accuracy 47.66%, cross entropy 1.625777
+I0429 20:27:47.981031 139761460909888 train.py:224] Step #763: rate 0.000066, accuracy 51.56%, cross entropy 1.606376
+I0429 20:27:48.456237 139761460909888 train.py:224] Step #764: rate 0.000066, accuracy 62.50%, cross entropy 1.464322
+I0429 20:27:48.932581 139761460909888 train.py:224] Step #765: rate 0.000066, accuracy 53.12%, cross entropy 1.549896
+I0429 20:27:49.408607 139761460909888 train.py:224] Step #766: rate 0.000066, accuracy 56.25%, cross entropy 1.530521
+I0429 20:27:49.882997 139761460909888 train.py:224] Step #767: rate 0.000066, accuracy 39.84%, cross entropy 1.869940
+I0429 20:27:50.350152 139761460909888 train.py:224] Step #768: rate 0.000066, accuracy 49.22%, cross entropy 1.657359
+I0429 20:27:50.819860 139761460909888 train.py:224] Step #769: rate 0.000066, accuracy 52.34%, cross entropy 1.638262
+I0429 20:27:51.292415 139761460909888 train.py:224] Step #770: rate 0.000067, accuracy 31.25%, cross entropy 1.981702
+I0429 20:27:51.764241 139761460909888 train.py:224] Step #771: rate 0.000067, accuracy 40.62%, cross entropy 2.032788
+I0429 20:27:52.232717 139761460909888 train.py:224] Step #772: rate 0.000067, accuracy 50.78%, cross entropy 1.719292
+I0429 20:27:52.703664 139761460909888 train.py:224] Step #773: rate 0.000067, accuracy 44.53%, cross entropy 1.763544
+I0429 20:27:53.175432 139761460909888 train.py:224] Step #774: rate 0.000067, accuracy 59.38%, cross entropy 1.556607
+I0429 20:27:53.653589 139761460909888 train.py:224] Step #775: rate 0.000067, accuracy 57.81%, cross entropy 1.504713
+I0429 20:27:54.126754 139761460909888 train.py:224] Step #776: rate 0.000067, accuracy 32.81%, cross entropy 1.883273
+I0429 20:27:54.604450 139761460909888 train.py:224] Step #777: rate 0.000067, accuracy 39.06%, cross entropy 1.934459
+I0429 20:27:55.075338 139761460909888 train.py:224] Step #778: rate 0.000067, accuracy 46.88%, cross entropy 1.844455
+I0429 20:27:55.557452 139761460909888 train.py:224] Step #779: rate 0.000067, accuracy 61.72%, cross entropy 1.478471
+I0429 20:27:56.032032 139761460909888 train.py:224] Step #780: rate 0.000067, accuracy 34.38%, cross entropy 2.072249
+I0429 20:27:56.504456 139761460909888 train.py:224] Step #781: rate 0.000068, accuracy 50.78%, cross entropy 1.614030
+I0429 20:27:56.985808 139761460909888 train.py:224] Step #782: rate 0.000068, accuracy 33.59%, cross entropy 2.008955
+I0429 20:27:57.450447 139761460909888 train.py:224] Step #783: rate 0.000068, accuracy 55.47%, cross entropy 1.665722
+I0429 20:27:57.924782 139761460909888 train.py:224] Step #784: rate 0.000068, accuracy 55.47%, cross entropy 1.570725
+I0429 20:27:58.397028 139761460909888 train.py:224] Step #785: rate 0.000068, accuracy 57.81%, cross entropy 1.460970
+I0429 20:27:58.877904 139761460909888 train.py:224] Step #786: rate 0.000068, accuracy 51.56%, cross entropy 1.535559
+I0429 20:27:59.342965 139761460909888 train.py:224] Step #787: rate 0.000068, accuracy 57.03%, cross entropy 1.572252
+I0429 20:27:59.813719 139761460909888 train.py:224] Step #788: rate 0.000068, accuracy 57.81%, cross entropy 1.585089
+I0429 20:28:00.278416 139761460909888 train.py:224] Step #789: rate 0.000068, accuracy 42.97%, cross entropy 1.850006
+I0429 20:28:00.756826 139761460909888 train.py:224] Step #790: rate 0.000068, accuracy 60.94%, cross entropy 1.422913
+I0429 20:28:01.231112 139761460909888 train.py:224] Step #791: rate 0.000068, accuracy 37.50%, cross entropy 1.937566
+I0429 20:28:01.707094 139761460909888 train.py:224] Step #792: rate 0.000068, accuracy 62.50%, cross entropy 1.434728
+I0429 20:28:11.811980 139761460909888 train.py:276] Step 792: Validation accuracy = 68.18% (N=4352)
+I0429 20:28:12.045157 139761460909888 train.py:286] So far the best validation accuracy is 68.18%
+I0429 20:28:12.529316 139761460909888 train.py:224] Step #793: rate 0.000069, accuracy 51.56%, cross entropy 1.682303
+I0429 20:28:13.010889 139761460909888 train.py:224] Step #794: rate 0.000069, accuracy 50.00%, cross entropy 1.740289
+I0429 20:28:13.494148 139761460909888 train.py:224] Step #795: rate 0.000069, accuracy 61.72%, cross entropy 1.535926
+I0429 20:28:13.969204 139761460909888 train.py:224] Step #796: rate 0.000069, accuracy 42.19%, cross entropy 1.892307
+I0429 20:28:14.452584 139761460909888 train.py:224] Step #797: rate 0.000069, accuracy 44.53%, cross entropy 1.845986
+I0429 20:28:14.923413 139761460909888 train.py:224] Step #798: rate 0.000069, accuracy 67.19%, cross entropy 1.313002
+I0429 20:28:15.412312 139761460909888 train.py:224] Step #799: rate 0.000069, accuracy 56.25%, cross entropy 1.604966
+I0429 20:28:15.891032 139761460909888 train.py:224] Step #800: rate 0.000069, accuracy 61.72%, cross entropy 1.497319
+I0429 20:28:16.376727 139761460909888 train.py:224] Step #801: rate 0.000069, accuracy 59.38%, cross entropy 1.503656
+I0429 20:28:16.856106 139761460909888 train.py:224] Step #802: rate 0.000069, accuracy 60.16%, cross entropy 1.497888
+I0429 20:28:17.327426 139761460909888 train.py:224] Step #803: rate 0.000069, accuracy 55.47%, cross entropy 1.532946
+I0429 20:28:17.817571 139761460909888 train.py:224] Step #804: rate 0.000069, accuracy 48.44%, cross entropy 1.767831
+I0429 20:28:18.306511 139761460909888 train.py:224] Step #805: rate 0.000070, accuracy 46.88%, cross entropy 1.695825
+I0429 20:28:18.779696 139761460909888 train.py:224] Step #806: rate 0.000070, accuracy 48.44%, cross entropy 1.697232
+I0429 20:28:19.257974 139761460909888 train.py:224] Step #807: rate 0.000070, accuracy 35.94%, cross entropy 1.919382
+I0429 20:28:19.737249 139761460909888 train.py:224] Step #808: rate 0.000070, accuracy 46.09%, cross entropy 1.707182
+I0429 20:28:20.216620 139761460909888 train.py:224] Step #809: rate 0.000070, accuracy 61.72%, cross entropy 1.486851
+I0429 20:28:20.684683 139761460909888 train.py:224] Step #810: rate 0.000070, accuracy 71.88%, cross entropy 1.292291
+I0429 20:28:21.173025 139761460909888 train.py:224] Step #811: rate 0.000070, accuracy 64.84%, cross entropy 1.394473
+I0429 20:28:21.658814 139761460909888 train.py:224] Step #812: rate 0.000070, accuracy 60.94%, cross entropy 1.451217
+I0429 20:28:22.132643 139761460909888 train.py:224] Step #813: rate 0.000070, accuracy 50.00%, cross entropy 1.685599
+I0429 20:28:22.605216 139761460909888 train.py:224] Step #814: rate 0.000070, accuracy 46.88%, cross entropy 1.858439
+I0429 20:28:23.091239 139761460909888 train.py:224] Step #815: rate 0.000070, accuracy 50.00%, cross entropy 1.764690
+I0429 20:28:23.560674 139761460909888 train.py:224] Step #816: rate 0.000071, accuracy 67.19%, cross entropy 1.374687
+I0429 20:28:24.032037 139761460909888 train.py:224] Step #817: rate 0.000071, accuracy 55.47%, cross entropy 1.560879
+I0429 20:28:24.505057 139761460909888 train.py:224] Step #818: rate 0.000071, accuracy 56.25%, cross entropy 1.528965
+I0429 20:28:24.974327 139761460909888 train.py:224] Step #819: rate 0.000071, accuracy 34.38%, cross entropy 1.967662
+I0429 20:28:25.449539 139761460909888 train.py:224] Step #820: rate 0.000071, accuracy 50.78%, cross entropy 1.624293
+I0429 20:28:25.918193 139761460909888 train.py:224] Step #821: rate 0.000071, accuracy 54.69%, cross entropy 1.591495
+I0429 20:28:26.397971 139761460909888 train.py:224] Step #822: rate 0.000071, accuracy 58.59%, cross entropy 1.505997
+I0429 20:28:26.869107 139761460909888 train.py:224] Step #823: rate 0.000071, accuracy 31.25%, cross entropy 2.021199
+I0429 20:28:27.340192 139761460909888 train.py:224] Step #824: rate 0.000071, accuracy 59.38%, cross entropy 1.468353
+I0429 20:28:27.819744 139761460909888 train.py:224] Step #825: rate 0.000071, accuracy 57.03%, cross entropy 1.597607
+I0429 20:28:28.289075 139761460909888 train.py:224] Step #826: rate 0.000071, accuracy 71.09%, cross entropy 1.315700
+I0429 20:28:28.749693 139761460909888 train.py:224] Step #827: rate 0.000071, accuracy 52.34%, cross entropy 1.708215
+I0429 20:28:29.229703 139761460909888 train.py:224] Step #828: rate 0.000072, accuracy 61.72%, cross entropy 1.487418
+I0429 20:28:29.702315 139761460909888 train.py:224] Step #829: rate 0.000072, accuracy 63.28%, cross entropy 1.358738
+I0429 20:28:30.171699 139761460909888 train.py:224] Step #830: rate 0.000072, accuracy 59.38%, cross entropy 1.448647
+I0429 20:28:30.647711 139761460909888 train.py:224] Step #831: rate 0.000072, accuracy 46.09%, cross entropy 1.763793
+I0429 20:28:31.113374 139761460909888 train.py:224] Step #832: rate 0.000072, accuracy 35.94%, cross entropy 1.986133
+I0429 20:28:31.586112 139761460909888 train.py:224] Step #833: rate 0.000072, accuracy 46.09%, cross entropy 1.686538
+I0429 20:28:32.064758 139761460909888 train.py:224] Step #834: rate 0.000072, accuracy 64.84%, cross entropy 1.395148
+I0429 20:28:32.538511 139761460909888 train.py:224] Step #835: rate 0.000072, accuracy 60.94%, cross entropy 1.395562
+I0429 20:28:33.001126 139761460909888 train.py:224] Step #836: rate 0.000072, accuracy 39.84%, cross entropy 1.879749
+I0429 20:28:33.474265 139761460909888 train.py:224] Step #837: rate 0.000072, accuracy 55.47%, cross entropy 1.520332
+I0429 20:28:33.953252 139761460909888 train.py:224] Step #838: rate 0.000072, accuracy 62.50%, cross entropy 1.402032
+I0429 20:28:34.427977 139761460909888 train.py:224] Step #839: rate 0.000072, accuracy 54.69%, cross entropy 1.683475
+I0429 20:28:34.904968 139761460909888 train.py:224] Step #840: rate 0.000073, accuracy 46.09%, cross entropy 1.724738
+I0429 20:28:35.372867 139761460909888 train.py:224] Step #841: rate 0.000073, accuracy 60.16%, cross entropy 1.587657
+I0429 20:28:35.845610 139761460909888 train.py:224] Step #842: rate 0.000073, accuracy 59.38%, cross entropy 1.464094
+I0429 20:28:36.316180 139761460909888 train.py:224] Step #843: rate 0.000073, accuracy 53.12%, cross entropy 1.587518
+I0429 20:28:36.788743 139761460909888 train.py:224] Step #844: rate 0.000073, accuracy 51.56%, cross entropy 1.685687
+I0429 20:28:37.265557 139761460909888 train.py:224] Step #845: rate 0.000073, accuracy 60.94%, cross entropy 1.409499
+I0429 20:28:37.737919 139761460909888 train.py:224] Step #846: rate 0.000073, accuracy 46.09%, cross entropy 1.723718
+I0429 20:28:38.215384 139761460909888 train.py:224] Step #847: rate 0.000073, accuracy 50.00%, cross entropy 1.675489
+I0429 20:28:38.693067 139761460909888 train.py:224] Step #848: rate 0.000073, accuracy 46.09%, cross entropy 1.699566
+I0429 20:28:39.164263 139761460909888 train.py:224] Step #849: rate 0.000073, accuracy 67.19%, cross entropy 1.384127
+I0429 20:28:39.629042 139761460909888 train.py:224] Step #850: rate 0.000073, accuracy 63.28%, cross entropy 1.487310
+I0429 20:28:40.101098 139761460909888 train.py:224] Step #851: rate 0.000074, accuracy 33.59%, cross entropy 2.037259
+I0429 20:28:40.573142 139761460909888 train.py:224] Step #852: rate 0.000074, accuracy 53.12%, cross entropy 1.601085
+I0429 20:28:41.042549 139761460909888 train.py:224] Step #853: rate 0.000074, accuracy 51.56%, cross entropy 1.614954
+I0429 20:28:41.515202 139761460909888 train.py:224] Step #854: rate 0.000074, accuracy 58.59%, cross entropy 1.432878
+I0429 20:28:41.983932 139761460909888 train.py:224] Step #855: rate 0.000074, accuracy 69.53%, cross entropy 1.344331
+I0429 20:28:42.460874 139761460909888 train.py:224] Step #856: rate 0.000074, accuracy 50.78%, cross entropy 1.542254
+I0429 20:28:42.944990 139761460909888 train.py:224] Step #857: rate 0.000074, accuracy 60.16%, cross entropy 1.475583
+I0429 20:28:43.416904 139761460909888 train.py:224] Step #858: rate 0.000074, accuracy 71.09%, cross entropy 1.312009
+I0429 20:28:43.887552 139761460909888 train.py:224] Step #859: rate 0.000074, accuracy 42.19%, cross entropy 1.737303
+I0429 20:28:44.355505 139761460909888 train.py:224] Step #860: rate 0.000074, accuracy 59.38%, cross entropy 1.505387
+I0429 20:28:44.825559 139761460909888 train.py:224] Step #861: rate 0.000074, accuracy 47.66%, cross entropy 1.686846
+I0429 20:28:45.289525 139761460909888 train.py:224] Step #862: rate 0.000074, accuracy 57.03%, cross entropy 1.563873
+I0429 20:28:45.761819 139761460909888 train.py:224] Step #863: rate 0.000075, accuracy 58.59%, cross entropy 1.476924

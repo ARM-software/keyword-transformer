@@ -5,3 +5,4 @@ graphviz
 numpy==1.19.5
 absl-py
 transformers
+wandb

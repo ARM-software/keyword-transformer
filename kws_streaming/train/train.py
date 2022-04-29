@@ -34,11 +34,13 @@ import tensorflow_addons as tfa
 import kws_streaming.data.input_data as input_data
 from kws_streaming.models import models
 from kws_streaming.models import utils
-
+import wandb
 import math
 
 from transformers import AdamWeightDecay
 
+# WandB Logs
+WandB_log = {}
 
 def train(flags):
   """Model training."""
@@ -223,6 +225,10 @@ def train(flags):
         summary = tf.Summary(value=[
             tf.Summary.Value(tag='accuracy', simple_value=acc_label),
         ])
+        WandB_log['Training/step'] = training_step
+        WandB_log['Training/loss'] = loss_label
+        WandB_log['Training/accuracy'] = acc_label * 100
+
 
       train_writer.add_summary(summary, training_step)
 
@@ -268,6 +274,8 @@ def train(flags):
       total_accuracy = total_accuracy / count
       logging.info('Step %d: Validation accuracy = %.2f%% (N=%d)',
                    *(training_step, total_accuracy * 100, set_size))
+      WandB_log['Validation/step'] = training_step
+      WandB_log['Validation/accuracy'] = total_accuracy * 100
 
       # Save the model checkpoint when validation accuracy improves
       if total_accuracy >= best_accuracy:
@@ -276,7 +284,8 @@ def train(flags):
         model.save_weights(flags.train_dir + 'best_weights')
       logging.info('So far the best validation accuracy is %.2f%%',
                    (best_accuracy * 100))
-
+      
+    wandb.log(WandB_log)
   tf.keras.backend.set_learning_phase(0)
   set_size = audio_processor.set_size('testing')
   set_size = int(set_size / flags.batch_size) * flags.batch_size
